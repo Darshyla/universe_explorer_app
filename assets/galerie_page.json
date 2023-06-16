@@ -1,0 +1,346 @@
+
+[
+   {
+      "page":"Nébuleuses et galaxies",
+      "images":
+      [
+            
+         {
+            "path": "assets/images/nebuleuse_galaxie/andromedre_galaxy.jpg",
+            "description": "La galaxie d'Andromède est une des plus proches galaxies de la Voie lactée et peut être observée à l'œil nu dans de bonnes conditions."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/centaurus_a.jpg",
+            "description": "Centaurus A est une galaxie elliptique géante située dans la constellation du Centaure. Elle est célèbre pour sa bande de poussière et ses jets de plasma."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/nebuleuse_de_la_carene.jpg",
+            "description": "La nébuleuse de la Carène, également connue sous le nom de Grand Nuage de Magellan, est une nébuleuse en émission située dans la constellation de la Carène."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/nebuleuse_de_la_meduse.jpg",
+            "description": "La nébuleuse de la Méduse est une nébuleuse planétaire située dans la constellation du Taureau. Elle doit son nom à sa ressemblance avec la tête de la mythique Gorgone Méduse."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/nebuleuse_de_la_rosette.jpeg",
+            "description": "La nébuleuse de la Rosette est une grande nébuleuse en émission située dans la constellation de la Licorne. Elle doit son nom à sa forme qui rappelle une rose."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/nebuleuse_de_laigle.jpeg",
+            "description": "La nébuleuse de l'Aigle est une nébuleuse en émission située dans la constellation du Serpent. Elle est célèbre pour sa colonne de gaz et de poussière qui ressemble à un pilier."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/nebuleuse_de_lhaltere.jpg",
+            "description": "La nébuleuse de l'Haltère est une nébuleuse planétaire située dans la constellation du Serpent. Elle tire son nom de sa forme allongée qui rappelle un haltère de musculation."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/nebuleuse_de_linsecte.jpg",
+            "description": "La nébuleuse de l'Insecte est une nébuleuse planétaire située dans la constellation de l'Hydre mâle. Elle doit son nom à sa forme qui rappelle celle d'un insecte."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/nebuleuse_dorion.jpg",
+            "description": "La nébuleuse d'Orion est une grande nébuleuse en émission située dans la constellation d'Orion. Elle est l'une des nébuleuses les plus étudiées et les plus photographiées."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/galaxy_roue_du_chariot.jpg",
+            "description": "La galaxie de la Roue du Chariot est une galaxie spirale située dans la constellation des Chiens de chasse. Elle doit son nom à ses bras spiraux qui ressemblent à une roue de chariot."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/galaxy_sombrero.jpg",
+            "description": "La galaxie du Sombrero est une galaxie lenticulaire située dans la constellation de la Vierge. Elle doit son nom à son apparence qui rappelle un sombrero mexicain."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/Hoag's_object.jpg",
+            "description": "L'objet de Hoag est une galaxie particulière située dans la constellation du Serpent. Elle est caractérisée par son anneau de brillantes étoiles entourant un noyau sombre."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/nebuleuse_du_papillon.jpg",
+            "description": "La nébuleuse du Papillon est une nébuleuse planétaire située dans la constellation du Scorpion. Elle tire son nom de sa forme qui rappelle celle d'un papillon aux ailes déployées."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/nebuleuse_du_sorcier.jpg",
+            "description": "La nébuleuse du Sorcier est une nébuleuse en émission située dans la constellation de Céphée. Elle doit son nom à sa ressemblance avec un sorcier levant les bras."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/nebuleuse_tete_de_cheval.jpg",
+            "description": "La nébuleuse de la Tête de Cheval est une nébuleuse obscure située dans la constellation d'Orion. Elle doit son nom à sa forme qui ressemble à la tête d'un cheval."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/nebuleuse-helice.jpg",
+            "description": "La nébuleuse de l'Hélice, également connue sous le nom de NGC 7293, est une nébuleuse planétaire située dans la constellation du Verseau. Elle doit son nom à sa forme en spirale rappelant celle d'une hélice."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/voie_lactee_galaxy.jpg",
+            "description": "La Voie lactée est la galaxie dans laquelle se trouve notre système solaire. Elle est visible sous la forme d'une bande lumineuse dans le ciel nocturne."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/CometGalaxy.jpg",
+            "description": "La galaxie de la Comète est une galaxie spirale située dans la constellation de la Grande Ourse. Elle tire son nom de son apparence qui rappelle celle d'une comète avec une queue allongée."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/galaxy_du_cigare.jpg",
+            "description": "La galaxie du Cigare est une galaxie spirale située dans la constellation de la Vierge. Elle doit son nom à sa forme allongée qui rappelle celle d'un cigare."
+          },
+          {
+            "path": "assets/images/nebuleuse_galaxie/galaxy_du_tetard.jpg",
+            "description": "La galaxie du Têtard est une galaxie irrégulière située dans la constellation du Verseau. Elle tire son nom de sa forme qui ressemble à celle d'un petit têtard."
+          }
+
+      ]
+   },
+   {
+      "page":"Planètes, comètes et astéroïdes",
+      "images":
+      [
+            
+         {
+            "path": "assets/images/planete_comete/Churyumov-Gerasimenko.jpg",
+            "description": "Churyumov-Gerasimenko est une comète du système solaire. Elle a été étudiée de près par la mission spatiale Rosetta de l'ESA, révélant de nombreuses informations sur la composition et la structure des comètes."
+          },
+          {
+            "path": "assets/images/planete_comete/Comet_Halley.jpg",
+            "description": "La comète de Halley est une comète périodique qui apparaît dans le ciel tous les 76 ans environ. Elle est l'une des comètes les plus célèbres et a été observée depuis des milliers d'années."
+          },
+          {
+            "path": "assets/images/planete_comete/jupiter.jpeg",
+            "description": "Jupiter est la plus grande planète du système solaire. Elle est principalement composée de gaz et possède une atmosphère dense ainsi que de nombreuses tempêtes, dont la célèbre Grande Tache Rouge."
+          },
+          {
+            "path": "assets/images/planete_comete/lune.png",
+            "description": "La Lune est le seul satellite naturel de la Terre. Elle joue un rôle important dans les marées et a été le site d'explorations humaines lors des missions Apollo de la NASA."
+          },
+          {
+            "path": "assets/images/planete_comete/mars.jpg",
+            "description": "Mars est la quatrième planète à partir du Soleil dans le système solaire. Elle est souvent appelée la \"planète rouge\" en raison de sa couleur distinctive, qui est due à la présence d'oxyde de fer sur sa surface."
+          },
+          {
+            "path": "assets/images/planete_comete/mercure.jpg",
+            "description": "Mercure est la planète la plus proche du Soleil et la plus petite planète du système solaire. Elle a une surface rocheuse et est soumise à des températures extrêmes en raison de sa proximité avec le Soleil."
+          },
+          {
+            "path": "assets/images/planete_comete/oumuamua.jpeg",
+            "description": "Oumuamua est un objet interstellaire qui a été détecté traversant notre système solaire en 2017. Son origine exacte reste inconnue, mais il a suscité beaucoup d'intérêt et de spéculation parmi les astronomes."
+          },
+          {
+            "path": "assets/images/planete_comete/planete-venus-1-.jpeg",
+            "description": "Vénus est la deuxième planète à partir du Soleil et est souvent appelée la \"planète jumelle\" de la Terre en raison de leur taille et de leur composition similaires. Cependant, Vénus a une atmosphère dense et un effet de serre intense, ce qui en fait une planète inhospitalière."
+          },
+          {
+            "path": "assets/images/planete_comete/pluton.jpeg",
+            "description": "Pluton était autrefois considérée comme la neuvième planète du système solaire, mais elle a été reclassifiée en tant que \"planète naine\" en 2006. Elle est principalement composée de roches et de glace et a une orbite excentrique autour du Soleil."
+          },
+          {
+            "path": "assets/images/planete_comete/saturne.jpeg",
+            "description": "Saturne est la sixième planète à partir du Soleil dans le système solaire. Elle est connue pour ses magnifiques anneaux composés de glace et de roche. Saturne est une planète gazeuse et est plus grande que la Terre."
+          },
+          {
+            "path": "assets/images/planete_comete/systeme_solaire.jpg",
+            "description": "Le système solaire est le système planétaire qui abrite notre planète Terre. Il est composé du Soleil, de huit planètes, de nombreux satellites naturels, de comètes, d'astéroïdes et d'autres corps célestes. C'est l'endroit où nous vivons !"
+          },
+          {
+            "path": "assets/images/planete_comete/uranus.jpg",
+            "description": "Uranus est la septième planète à partir du Soleil dans le système solaire. Elle est principalement composée de gaz et a une couleur bleu-vert distincte en raison de la présence de méthane dans son atmosphère. Uranus possède également des anneaux et des lunes."
+          }
+
+      ]
+   },
+   {
+      "page":"Etoiles et constellations",
+      "images":
+      [
+            
+         {
+            "path": "assets/images/etoile_constellation/bouvier.jpg",
+            "description": "La constellation du Bouvier est l'une des constellations du ciel nocturne. Elle est souvent représentée comme un homme tenant un bâton et une étoile. Le Bouvier abrite plusieurs étoiles brillantes et est visible dans l'hémisphère nord."
+          },
+          {
+            "path": "assets/images/etoile_constellation/cephee.jpg",
+            "description": "Céphée est une constellation située dans l'hémisphère nord. Elle est associée à un roi mythologique dans la mythologie grecque. Céphée contient plusieurs étoiles brillantes et est souvent repérée à côté de la constellation de Cassiopée."
+          },
+          {
+            "path": "assets/images/etoile_constellation/etoile_du_berger.jpeg",
+            "description": "L'étoile du Berger, également connue sous le nom de Vénus, est la planète la plus brillante du ciel nocturne après la Lune. Elle est visible à l'œil nu et apparaît comme un point lumineux dans le ciel. L'étoile du Berger est souvent associée au matin ou au soir."
+          },
+          {
+            "path": "assets/images/etoile_constellation/etoile_la_plus_lointaine.jpeg",
+            "description": "L'étoile la plus lointaine connue est une étoile située à des milliards d'années-lumière de la Terre. En raison de la distance extrême, son observation détaillée est difficile. Cette étoile lointaine nous donne un aperçu de l'univers à des échelles cosmiques."
+          },
+          {
+            "path": "assets/images/etoile_constellation/etoile-polaire-002.jpg",
+            "description": "L'étoile polaire, également connue sous le nom de Polaris, est une étoile brillante située près du pôle nord céleste. Elle est utilisée comme point de repère pour la navigation et se trouve dans la constellation de la Petite Ourse. L'étoile polaire est fixe dans le ciel et ne semble pas bouger au fil du temps."
+          },
+          {
+            "path": "assets/images/etoile_constellation/grand_ourse.webp",
+            "description": "La Grande Ourse est une constellation bien connue dans l'hémisphère nord. Elle est formée de sept étoiles brillantes qui ressemblent à une casserole ou à une louche. La Grande Ourse est souvent utilisée pour repérer l'étoile polaire, car elle pointe dans sa direction."
+          },
+          {
+            "path": "assets/images/etoile_constellation/hercule.jpg",
+            "description": "Hercule est une constellation du ciel nocturne qui représente le héros mythologique grec Héraclès (Hercule en latin). Elle contient plusieurs étoiles brillantes et est associée à de nombreuses histoires et légendes de la mythologie grecque."
+          },
+          {
+            "path": "assets/images/etoile_constellation/orion.webp",
+            "description": "Orion est une constellation facilement reconnaissable grâce à ses trois étoiles alignées en ceinture. Elle est visible dans les deux hémisphères et abrite plusieurs étoiles lumineuses, dont Bételgeuse et Rigel. Orion est associé à de nombreuses histoires et mythologies du monde."
+          },
+          {
+            "path": "assets/images/etoile_constellation/pegase.jpg",
+            "description": "Pégase est une constellation du ciel nocturne associée au cheval ailé mythologique du même nom. Elle est généralement représentée comme un carré ou un losange de quatre étoiles. Pégase est située dans l'hémisphère nord et peut être observée pendant les mois d'automne."
+          },
+          {
+            "path": "assets/images/etoile_constellation/petite-ourse.jpg",
+            "description": "La Petite Ourse est une constellation qui fait partie de la constellation de l'Ourse, également connue sous le nom de Grande Ourse. Elle contient l'étoile polaire et est utilisée comme point de repère pour la navigation. La Petite Ourse est souvent représentée comme une casserole inversée."
+          },
+          {
+            "path": "assets/images/etoile_constellation/proxima_centauri.jpg",
+            "description": "Proxima Centauri est une étoile naine rouge située dans le système stellaire le plus proche de notre système solaire, Alpha Centauri. Elle est également connue sous le nom de Proxima du Centaure. Proxima Centauri est une étoile faible et peu visible à l'œil nu, mais elle est d'une grande importance en tant que voisine la plus proche de notre soleil."
+          },
+          {
+            "path": "assets/images/etoile_constellation/soleil.jpeg",
+            "description": "Le Soleil est notre étoile la plus proche et la principale source de lumière et d'énergie pour la Terre. Il est situé au centre de notre système solaire et brille grâce à la fusion nucléaire qui se produit en son cœur. Le Soleil est une étoile de taille moyenne qui soutient la vie sur notre planète et influence notre climat, notre météo et notre cycle jour-nuit."
+          }
+
+      ]
+   },
+   {
+      "page":"Astronautes et missions spatiales",
+      "images":
+      [
+            
+         {
+            "path": "assets/images/astronaute/alyssa_carson.jpeg",
+            "description": "Alyssa Carson est une jeune astronaute américaine et une passionnée d'exploration spatiale. Elle est connue pour son ambition de devenir la première personne à fouler le sol de Mars. Alyssa Carson a suivi une formation approfondie à la NASA et est devenue une ambassadrice de l'espace pour inspirer les jeunes à poursuivre des carrières scientifiques et technologiques."
+          },
+          {
+            "path": "assets/images/astronaute/apollo11.jpg",
+            "description": "La mission Apollo 11 est une mission emblématique de la NASA qui a permis à l'astronaute Neil Armstrong de devenir le premier homme à marcher sur la Lune le 20 juillet 1969. La mission a été un moment historique pour l'humanité, marquant une avancée majeure dans l'exploration spatiale et l'accomplissement d'un objectif audacieux."
+          },
+          {
+            "path": "assets/images/astronaute/chien_laika.jpg",
+            "description": "Laika était une chienne husky sibérienne qui est devenue le premier être vivant à être envoyé dans l'espace par l'Union soviétique. Le 3 novembre 1957, Laika a été lancée à bord du satellite Spoutnik 2, marquant ainsi le premier vol orbital d'un être vivant. Malheureusement, Laika n'a pas survécu au voyage spatial, mais sa contribution a été importante pour les futures missions habitées."
+          },
+          {
+            "path": "assets/images/astronaute/guion_bluford.jpg",
+            "description": "Guion Bluford est un astronaute américain et est devenu le premier Afro-Américain à voyager dans l'espace. Il a participé à quatre missions spatiales à bord des navettes spatiales de la NASA. Bluford a ouvert la voie à la diversité et à l'inclusion dans l'exploration spatiale, inspirant de nombreux autres à poursuivre des carrières dans ce domaine."
+          },
+          {
+            "path": "assets/images/astronaute/hubble.jpg",
+            "description": "Le télescope spatial Hubble est un télescope emblématique de la NASA lancé en 1990. Il a révolutionné notre compréhension de l'univers en fournissant des images et des données précises sur des objets célestes éloignés. Le télescope spatial Hubble a permis de nombreuses découvertes et continue de jouer un rôle crucial dans la recherche astronomique."
+          },
+          {
+            "path": "assets/images/astronaute/Mae_Carol_Jemison.jpg",
+            "description": "Mae Carol Jemison est une astronaute américaine et est devenue la première femme afro-américaine à voyager dans l'espace. Elle a fait partie de la mission STS-47 à bord de la navette spatiale Endeavour en 1992. Jemison est également médecin de formation et est très engagée dans l'éducation scientifique et la promotion des femmes et des minorités dans les domaines STEM."
+          },
+          {
+            "path": "assets/images/astronaute/neil_armstrong.jpg",
+            "description": "Neil Armstrong était un astronaute américain et est célèbre pour être le premier homme à avoir marché sur la Lune lors de la mission Apollo 11 en 1969. Sa célèbre déclaration, 'C'est un petit pas pour l'homme, mais un bond de géant pour l'humanité', a marqué l'histoire de l'exploration spatiale et de l'accomplissement de l'objectif de la NASA."
+          },
+          {
+            "path": "assets/images/astronaute/soho.png",
+            "description": "Le Solar and Heliospheric Observatory (SOHO) est un satellite d'observation solaire conjointement exploité par la NASA et l'ESA (Agence spatiale européenne). Lancé en 1995, SOHO étudie le Soleil et son influence sur le système solaire. Il a fourni d'importantes données et images sur les éruptions solaires, les vents solaires et d'autres phénomènes solaires."
+          },
+          {
+            "path": "assets/images/astronaute/sonde_parker.jpg",
+            "description": "La sonde Parker Solar Probe est une mission de la NASA lancée en 2018 pour étudier la couronne solaire et le vent solaire. C'est la première sonde spatiale à s'approcher aussi près du Soleil, à une distance record de seulement 6 millions de kilomètres de la surface solaire. La sonde Parker Solar Probe fournit des données cruciales pour mieux comprendre notre étoile et son impact sur la Terre."
+          },
+          {
+            "path": "assets/images/astronaute/sonde_voyager1.jpg",
+            "description": "La sonde Voyager 1 est une sonde spatiale lancée en 1977 par la NASA pour explorer les planètes extérieures du système solaire. Voyager 1 a fourni des images et des données détaillées sur Jupiter, Saturne, Uranus et Neptune. En 2012, elle est devenue la première sonde à entrer dans l'espace interstellaire, marquant un jalon historique dans l'exploration spatiale."
+          },
+          {
+            "path": "assets/images/astronaute/voyager-2-espace-interstellaire.jpg",
+            "description": "La sonde Voyager 2 est une sonde spatiale jumelle de Voyager 1, lancée en 1977 pour explorer les planètes extérieures. Voyager 2 a visité Jupiter, Saturne, Uranus et Neptune, fournissant des images et des données précieuses sur ces planètes. En 2018, elle est devenue la deuxième sonde à entrer dans l'espace interstellaire, nous fournissant des informations sur la frontière du système solaire."
+          }
+      ]
+   },
+   {
+      "page":"Phénomènes célèstes spéciaux",
+      "images":
+      [
+            
+         {
+            "path": "assets/images/phenomene_celeste/arcenciel.jpg",
+            "description": "Un arc-en-ciel est un phénomène optique qui se produit lorsque la lumière du soleil est réfléchie, réfractée et dispersée par les gouttelettes d'eau présentes dans l'atmosphère. Cela crée un spectre coloré en forme d'arc dans le ciel, avec les couleurs primaires rouge, orange, jaune, vert, bleu, indigo et violet."
+          },
+          {
+            "path": "assets/images/phenomene_celeste/aurore_boreale.jpeg",
+            "description": "Une aurore boréale est un phénomène lumineux qui se produit dans les régions polaires de la Terre. C'est le résultat de l'interaction entre les particules chargées du vent solaire et les atomes et molécules de l'atmosphère terrestre. Les aurores boréales se manifestent par des lueurs colorées dans le ciel nocturne, créant des formes ondulantes et dansantes."
+          },
+          {
+            "path": "assets/images/phenomene_celeste/eclipse.jpeg",
+            "description": "Une éclipse se produit lorsque la lumière provenant d'un objet céleste est occultée par un autre objet, créant une obscurité partielle ou totale. Les éclipses les plus connues sont les éclipses solaires, où la Lune se place entre la Terre et le Soleil, bloquant partiellement ou complètement la lumière du Soleil. Les éclipses lunaires se produisent lorsque la Lune passe dans l'ombre de la Terre, lui donnant une teinte rougeâtre."
+          },
+          {
+            "path": "assets/images/phenomene_celeste/etoile_filante.jpg",
+            "description": "Une étoile filante, également appelée météore, est un phénomène qui se produit lorsque des débris spatiaux, tels que des grains de poussière ou de petits fragments de roche, pénètrent dans l'atmosphère terrestre à grande vitesse et se consument en produisant une traînée lumineuse. Les étoiles filantes sont souvent visibles la nuit et sont considérées comme des phénomènes porte-bonheur."
+          },
+          {
+            "path": "assets/images/phenomene_celeste/halo.jpg",
+            "description": "Un halo est un phénomène optique qui se produit autour du Soleil ou de la Lune. Il se présente sous la forme d'un anneau lumineux ou coloré autour de l'astre, généralement causé par la réfraction et la réflexion de la lumière à travers des cristaux de glace présents dans l'atmosphère. Les halos peuvent présenter différentes formes et couleurs, ajoutant une touche magique au ciel."
+          },
+          {
+            "path": "assets/images/phenomene_celeste/Noctilucent_clouds_over_Uppsala,_Sweden.jpg",
+            "description": "Les nuages noctiluques, également appelés nuages mésosphériques polaires, sont des formations nuageuses qui se produisent dans la haute atmosphère terrestre. Ces nuages se forment à des altitudes élevées et sont visibles pendant la nuit, même après le coucher du soleil. Ils apparaissent souvent sous forme de fines bandes ou de voiles lumineux dans le ciel nocturne."
+          },
+          {
+            "path": "assets/images/phenomene_celeste/pleine_lune.jpg",
+            "description": "Une pleine lune se produit lorsque la Lune est directement en face du Soleil par rapport à la Terre, de sorte que sa surface illuminée est entièrement visible depuis la Terre. La pleine lune apparaît comme un disque lumineux et rond dans le ciel nocturne. C'est un spectacle magnifique qui a inspiré de nombreuses histoires, légendes et poésies."
+          },
+          {
+            "path": "assets/images/phenomene_celeste/pluie_detoile.jpg",
+            "description": "Une pluie d'étoiles, également connue sous le nom de pluie de météores ou d'essaim météorique, se produit lorsqu'un grand nombre de météores semblent provenir d'un point commun dans le ciel. Ces météores sont généralement associés à la traînée de débris laissée par une comète lorsqu'elle traverse l'orbite de la Terre. Les pluies d'étoiles sont souvent nommées d'après la constellation à partir de laquelle elles semblent provenir."
+          },
+          {
+            "path": "assets/images/phenomene_celeste/Soleil-de-minuit-La-serie-de-cliches-represente-le-parcours-quotidien-du-soleil-tel-que.png.jpeg",
+            "description": "Le soleil de minuit est un phénomène qui se produit dans les régions polaires pendant l'été. Pendant cette période, le soleil ne se couche pas complètement et reste visible toute la nuit. Le Soleil suit un parcours circulaire près de l'horizon, créant un effet de lumière particulier et unique. Le soleil de minuit est une expérience fascinante qui attire de nombreux visiteurs dans les régions polaires."
+          }
+      ]
+   },
+   {
+      "page":"Instruments astronomiques",
+      "images":
+      [
+         {
+           "path": "assets/images/instrument/634px-Planisphere.jpg",
+           "description": "Un planisphère est une carte du ciel utilisée pour identifier les étoiles, les constellations et d'autres objets célestes. Il présente une projection de la voûte céleste sur une surface plane, généralement en forme de disque. Les planisphères sont souvent utilisés par les astronomes amateurs pour se repérer dans le ciel et localiser les objets d'intérêt."
+         },
+         {
+           "path": "assets/images/instrument/anneau_astronomique.png",
+           "description": "Un anneau astronomique est un instrument utilisé pour mesurer les positions des étoiles et des planètes. Il est composé d'un anneau gradué et d'une règle mobile, permettant de lire les coordonnées célestes des objets observés. Les anneaux astronomiques sont utilisés depuis l'Antiquité et ont joué un rôle important dans l'astronomie traditionnelle."
+         },
+         {
+           "path": "assets/images/instrument/Celestial_globe_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC07156.JPG",
+           "description": "Un globe céleste est une représentation en trois dimensions de la voûte céleste. Il montre les étoiles, les constellations et d'autres objets célestes tels qu'ils apparaissent vus depuis la Terre. Les globes célestes sont utilisés comme outils d'apprentissage et de démonstration en astronomie, permettant d'explorer et de visualiser le ciel étoilé."
+         },
+         {
+           "path": "assets/images/instrument/etoile_guide_laser.jpg",
+           "description": "Un guide laser d'étoiles est un dispositif utilisé en astrophotographie pour aider à suivre les étoiles pendant de longues expositions. Il projette un faisceau laser étroit vers le ciel, créant un point de référence lumineux. Les photographes peuvent ainsi ajuster leur équipement en fonction de ce point pour maintenir les étoiles nettes et éviter le flou de mouvement."
+         },
+         {
+           "path": "assets/images/instrument/Goto_telescope.jpg",
+           "description": "Un télescope Goto est un type de télescope motorisé équipé d'un système de suivi automatisé. Il utilise des moteurs pour pointer précisément vers des objets célestes spécifiques et les suivre à mesure qu'ils se déplacent dans le ciel. Les télescopes Goto sont appréciés des astronomes amateurs car ils facilitent l'observation des objets et permettent une plus grande exploration du ciel."
+         },
+         {
+           "path": "assets/images/instrument/heliometre.jpg",
+           "description": "Un héliomètre est un instrument utilisé pour mesurer la distance angulaire entre deux étoiles ou deux points sur la surface du Soleil. Il est composé de deux télescopes montés sur une même monture, permettant une comparaison directe entre les deux objets observés. Les héliomètres ont été utilisés pour des mesures précises dans le domaine de l'astronomie et de l'astrométrie."
+         },
+         {
+           "path": "assets/images/instrument/longue_vue.jpg",
+           "description": "Une longue-vue astronomique, également appelée jumelles astronomiques, est un instrument optique portable utilisé pour observer les objets célestes. Elle est composée de deux petits télescopes montés côte à côte, offrant un grossissement et un champ de vision plus importants que ceux des jumelles classiques. Les longues-vues astronomiques sont pratiques pour l'observation des comètes, des planètes et d'autres objets du ciel nocturne."
+         },
+         {
+           "path": "assets/images/instrument/lunette_astronomique.jpg",
+           "description": "Une lunette astronomique est un type de télescope utilisant des lentilles pour collecter et focaliser la lumière des objets célestes. Elle est généralement plus petite et plus portable qu'un télescope réflecteur, ce qui en fait un choix populaire parmi les astronomes amateurs. Les lunettes astronomiques sont utilisées pour observer la Lune, les planètes, les étoiles et d'autres objets du ciel nocturne."
+         },
+         {
+           "path": "assets/images/instrument/monture_azimutale.jpg",
+           "description": "Une monture azimutale est un type de support utilisé pour les télescopes et autres instruments astronomiques. Elle permet de faire pivoter l'instrument horizontalement (azimut) et verticalement (altitude) pour suivre les objets célestes en mouvement. Les montures azimutales offrent une grande flexibilité et sont couramment utilisées pour les télescopes portables et les jumelles astronomiques."
+         },
+         {
+           "path": "assets/images/instrument/Sextant-2.jpg",
+           "description": "Un sextant est un instrument de navigation utilisé pour mesurer les angles entre les objets célestes, tels que le Soleil et les étoiles, et l'horizon. Il est composé d'un arc gradué et d'un miroir qui reflète la lumière de l'objet observé vers l'œil de l'observateur. Les sextants ont été utilisés par les navigateurs et les astronomes pour déterminer la position sur Terre en se basant sur les observations célestes."
+         }
+       ]
+       
+   }
+]
+ 
+

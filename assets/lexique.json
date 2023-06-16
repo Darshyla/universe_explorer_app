@@ -1,0 +1,624 @@
+{
+    "terms": [
+      {
+        "mot": "Aberration",
+        "definition": "Déviation apparente de la position d'un objet astronomique due à la combinaison du mouvement de la source lumineuse et de la vitesse de déplacement de l'observateur.",
+        "exemple": "L'aberration annuelle est une aberration causée par la révolution de la Terre autour du Soleil."
+      },
+      {
+        "mot": "Accrétion",
+        "definition": "Processus par lequel la matière s'accumule progressivement pour former un objet plus massif, tel qu'une étoile, une planète ou un trou noir, en raison de forces gravitationnelles.",
+        "exemple": "Les disques d'accrétion entourant les trous noirs supermassifs sont des sources de forte émission de rayons X."
+      },
+      {
+        "mot": "Achromatique",
+        "definition": "Qui ne produit pas de distorsion chromatique, c'est-à-dire qui n'introduit pas de séparation des couleurs.",
+        "exemple": "Un objectif achromatique est conçu pour minimiser les aberrations chromatiques dans les systèmes optiques."
+      },
+      {
+        "mot": "Adhérence gravitationnelle",
+        "definition": "Phénomène par lequel un objet céleste plus petit est capturé et retenu par la gravité d'un objet céleste plus massif.",
+        "exemple": "Les lunes des planètes sont souvent capturées par leur adhérence gravitationnelle."
+      },
+      {
+        "mot": "Adrastea",
+        "definition": "L'une des lunes de Jupiter, nommée d'après la fille d'Adrastus dans la mythologie grecque.",
+        "exemple": "Adrastea orbite très près de la planète Jupiter."
+      },
+      {
+        "mot": "Aérobie",
+        "definition": "Qui nécessite de l'oxygène pour survivre ou se produire.",
+        "exemple": "Certains micro-organismes peuvent survivre dans des environnements aérobies."
+      },
+      {
+        "mot": "Aérolite",
+        "definition": "Morceau de roche ou de métal extraterrestre qui atteint la surface de la Terre après avoir traversé l'atmosphère.",
+        "exemple": "Les aérolites sont souvent appelées météorites une fois qu'elles ont touché le sol."
+      },
+      {
+        "mot": "Agglomération",
+        "definition": "Regroupement de galaxies, de groupes de galaxies ou de superamas de galaxies.",
+        "exemple": "L'agglomération de la Vierge est un regroupement de galaxies qui comprend notre propre Voie lactée."
+      },
+      {
+        "mot": "Agrégat",
+        "definition": "Ensemble d'étoiles liées gravitationnellement qui sont proches les unes des autres.",
+        "exemple": "Les amas ouverts sont des exemples d'agrégats stellaires."
+      },
+      {
+        "mot": "Aigle",
+        "definition": "Constellation située dans l'hémisphère nord céleste, connue pour abriter le célèbre amas d'étoiles M16, également appelé la nébuleuse de l'Aigle.",
+        "exemple": "L'étoile la plus brillante de la constellation de l'Aigle est Altair."
+      },
+       {
+        "mot": "Albédo",
+        "definition": "Réflectivité d'une surface planétaire, exprimée en pourcentage, qui mesure la quantité de lumière réfléchie par rapport à la quantité de lumière incidente.",
+        "exemple": "La Lune a un albédo relativement faible, ce qui signifie qu'elle reflète seulement une petite partie de la lumière du Soleil."
+      },
+      {
+        "mot": "Aléatoire",
+        "definition": "Caractéristique d'un processus ou d'un événement qui se produit de manière imprévisible ou au hasard, sans suivre un schéma régulier ou prévisible.",
+        "exemple": "La formation de météorites est souvent considérée comme un processus aléatoire dans le système solaire."
+      },
+      {
+        "mot": "Algol",
+        "definition": "Une étoile binaire dans la constellation de Persée qui présente des variations périodiques de luminosité en raison de l'éclipse mutuelle des deux étoiles composantes.",
+        "exemple": "Algol est parfois appelée 'l'étoile démon' en raison de ses variations de luminosité."
+      },
+      {
+        "mot": "Alliage",
+        "definition": "Mélange de deux ou plusieurs métaux, généralement obtenu par fusion des composants.",
+        "exemple": "L'acier inoxydable est un alliage couramment utilisé dans la construction de télescopes."
+      },
+      {
+        "mot": "Almageste",
+        "definition": "Un ouvrage astronomique majeur écrit par l'astronome grec Claude Ptolémée au 2e siècle de notre ère, qui comprenait une compilation détaillée des connaissances astronomiques de l'époque.",
+        "exemple": "L'Almageste a été une référence importante en astronomie pendant des siècles."
+      },
+      {
+        "mot": "Alpha Centauri",
+        "definition": "Le système stellaire le plus proche de notre système solaire, situé à environ 4,37 années-lumière de distance.",
+        "exemple": "Alpha Centauri est composé de trois étoiles : Alpha Centauri A, Alpha Centauri B et Proxima Centauri."
+      },
+      {
+        "mot": "Altazimutal",
+        "definition": "Un type de monture de télescope qui permet des mouvements en azimut (rotation horizontale) et en hauteur (angle vertical) pour suivre les objets célestes.",
+        "exemple": "Les télescopes portables et les télescopes pour débutants sont souvent montés sur une monture altazimutale."
+      },
+      {
+        "mot": "Amas globulaire",
+        "definition": "Un regroupement dense d'étoiles qui est sphérique en forme et qui est situé dans la galaxie hôte.",
+        "exemple": "L'amas globulaire M13 dans la constellation d'Hercule est l'un des amas globulaires les plus célèbres."
+      },
+      {
+        "mot": "Amas ouvert",
+        "definition": "Un groupe lâche d'étoiles qui sont nées ensemble à partir de la même nébuleuse, souvent situées dans le disque galactique.",
+        "exemple": "L'amas ouvert des Pléiades est un exemple bien connu d'amas ouvert visible à l'œil nu."
+      },
+      {
+        "mot": "Aphélie",
+        "definition": "Le point de l'orbite d'une planète ou d'un objet en orbite autour du Soleil où il est le plus éloigné de celui-ci.",
+        "exemple": "La Terre atteint son aphélie autour du 4 juillet de chaque année."
+      },
+   {
+        "mot": "Apogée",
+        "definition": "Le point de l'orbite d'un satellite ou d'un objet en orbite autour de la Terre où il est le plus éloigné de celle-ci.",
+        "exemple": "La Lune atteint son apogée lorsque sa distance par rapport à la Terre est maximale."
+      },
+      {
+        "mot": "Apparition",
+        "definition": "Le moment où un objet céleste devient visible dans le ciel, généralement après avoir été caché par l'horizon ou par la lumière du jour.",
+        "exemple": "L'apparition des étoiles est observable après le coucher du Soleil."
+      },
+      {
+        "mot": "Apside",
+        "definition": "Les deux points extrêmes de l'orbite elliptique d'un objet céleste, à savoir le périapse (point le plus proche) et l'apoapse (point le plus éloigné).",
+        "exemple": "L'orbite de Mars a une apside rapprochée au périhélie et une apside éloignée à l'aphélie."
+      },
+      {
+        "mot": "Astéroïde",
+        "definition": "Un petit corps rocheux qui orbite autour du Soleil, principalement dans la ceinture d'astéroïdes située entre Mars et Jupiter.",
+        "exemple": "L'astéroïde le plus célèbre est peut-être Cérès, qui est également classifié comme une planète naine."
+      },
+      {
+        "mot": "Astrobiologie",
+        "definition": "La branche de la biologie qui étudie la possibilité de la vie dans l'univers, y compris les conditions nécessaires à la vie et la recherche de signes de vie extraterrestre.",
+        "exemple": "L'astrobiologie explore les environnements extrêmes sur Terre pour comprendre les limites de la vie et rechercher des analogues d'autres mondes."
+      },
+      {
+        "mot": "Astrographe",
+        "definition": "Un télescope spécialement conçu pour la photographie astronomique, avec des optiques et des mécanismes de suivi adaptés à cette tâche.",
+        "exemple": "L'astrographe est utilisé pour capturer des images détaillées d'objets célestes sur des plaques photographiques ou des capteurs numériques."
+      },
+      {
+        "mot": "Astronaute",
+        "definition": "Une personne qui est formée pour voyager dans l'espace et qui participe à des missions spatiales à bord de vaisseaux spatiaux.",
+        "exemple": "Neil Armstrong était un astronaute célèbre qui a été le premier homme à marcher sur la Lune."
+      },
+      {
+        "mot": "Astronomie",
+        "definition": "La science qui étudie les objets célestes, tels que les étoiles, les planètes, les galaxies et les phénomènes cosmiques, ainsi que les lois physiques qui les régissent.",
+        "exemple": "L'astronomie utilise l'observation et l'analyse des données pour comprendre l'Univers et ses composants."
+      },
+      {
+        "mot": "Atmosphère",
+        "definition": "La couche de gaz entourant une planète ou un corps céleste, maintenue en place par la gravité, qui joue un rôle important dans les conditions météorologiques et le maintien de la vie.",
+        "exemple": "L'atmosphère de la Terre est composée principalement d'azote, d'oxygène et de traces d'autres gaz."
+      },
+      {
+        "mot": "Aurore",
+        "definition": "Un phénomène lumineux observé dans le ciel nocturne des régions polaires, causé par l'interaction des particules solaires chargées avec l'atmosphère terrestre.",
+        "exemple": "Les aurores boréales sont visibles dans les hautes latitudes nord, comme en Scandinavie ou en Alaska."
+      },
+   {
+        "mot": "Azimut",
+        "definition": "La mesure de l'angle horizontal d'un objet céleste par rapport au nord, mesurée dans le sens des aiguilles d'une montre.",
+        "exemple": "L'azimut de Polaris, l'étoile du Nord, est de zéro degré."
+      },
+      {
+        "mot": "Binaire",
+        "definition": "Un système composé de deux objets célestes en orbite autour de leur centre de masse commun.",
+        "exemple": "Alpha Centauri est un système binaire d'étoiles composé d'Alpha Centauri A et Alpha Centauri B."
+      },
+      {
+        "mot": "Bolid",
+        "definition": "Un météore très brillant et spectaculaire qui explose souvent en entrant dans l'atmosphère terrestre.",
+        "exemple": "Le bolid de Tcheliabinsk en 2013 a produit une explosion puissante dans l'atmosphère au-dessus de la Russie."
+      },
+      {
+        "mot": "Brillance",
+        "definition": "L'intensité de la lumière émise ou réfléchie par un objet céleste, mesurée en magnitude apparente.",
+        "exemple": "Vénus est l'objet céleste le plus brillant après le Soleil et la Lune."
+      },
+      {
+        "mot": "Brouillard",
+        "definition": "Une masse de particules d'eau liquide en suspension dans l'atmosphère, qui peut réduire la visibilité astronomique.",
+        "exemple": "Le brouillard peut rendre difficile l'observation des étoiles et des objets célestes."
+      },
+      {
+        "mot": "Céphéide",
+        "definition": "Une étoile variable qui présente des variations régulières de luminosité en raison des pulsations radiales de son atmosphère.",
+        "exemple": "Les céphéides sont utilisées comme indicateurs de distance dans l'Univers en raison de leur relation entre période et luminosité."
+      },
+      {
+        "mot": "Ciel",
+        "definition": "La région de l'atmosphère visible depuis la surface de la Terre, qui contient les objets célestes tels que les étoiles, les planètes et les galaxies.",
+        "exemple": "Le ciel nocturne offre un spectacle magnifique avec ses milliers d'étoiles scintillantes."
+      },
+      {
+        "mot": "Cluster",
+        "definition": "Un groupe d'étoiles qui sont physiquement liées et qui ont une origine commune, souvent situé dans une galaxie.",
+        "exemple": "Le cluster d'étoiles des Pléiades est un exemple bien connu de regroupement stellaire."
+      },
+      {
+        "mot": "Comète",
+        "definition": "Un petit corps céleste composé de glace, de poussière et de roches, qui orbite autour du Soleil et qui développe une queue lumineuse lorsqu'elle se rapproche du Soleil.",
+        "exemple": "La comète de Halley est l'une des comètes les plus célèbres et elle revient près de la Terre tous les 76 ans environ."
+      },
+      {
+        "mot": "Conjonction",
+        "definition": "La configuration où deux objets célestes apparaissent proches l'un de l'autre dans le ciel, vus depuis la Terre.",
+        "exemple": "La conjonction de Vénus et de Jupiter a offert un spectacle céleste magnifique dans le passé."
+      },
+    {
+        "mot": "Constellation",
+        "definition": "Un groupe d'étoiles qui apparaît relié visuellement dans le ciel, formant une figure ou un motif reconnu.",
+        "exemple": "La constellation d'Orion est facilement reconnaissable avec ses étoiles formant une ceinture et un arc."
+      },
+      {
+        "mot": "Coronal",
+        "definition": "Relatif à la couronne du Soleil, la partie externe de son atmosphère qui est visible pendant une éclipse solaire totale.",
+        "exemple": "La couronne solaire est une structure coronale qui peut être observée lors d'une éclipse solaire."
+      },
+      {
+        "mot": "Cosmologie",
+        "definition": "La branche de l'astronomie qui étudie l'origine, la structure, l'évolution et le destin de l'Univers dans son ensemble.",
+        "exemple": "La cosmologie moderne cherche à comprendre l'expansion de l'Univers et la nature de la matière et de l'énergie."
+      },
+      {
+        "mot": "Cramoisi",
+        "definition": "Une couleur rouge foncé ou pourpre profond, souvent utilisée pour décrire des objets astronomiques tels que les nébuleuses.",
+        "exemple": "La nébuleuse du Crabe est une nébuleuse en forme de remnant de supernova qui a une teinte cramoi."
+      },
+      {
+        "mot": "Crescent",
+        "definition": "La phase d'un objet céleste, comme la Lune ou une planète, où seule une fine portion éclairée est visible depuis la Terre.",
+        "exemple": "Le croissant de Lune est une belle vue lorsqu'il est visible juste après le coucher du Soleil."
+      },
+      {
+        "mot": "Cyclone",
+        "definition": "Un système atmosphérique caractérisé par une circulation fermée et un faible centre de pression, souvent observé sur les planètes gazeuses comme Jupiter.",
+        "exemple": "La Grande Tache Rouge de Jupiter est un célèbre cyclone anticyclonique qui dure depuis plusieurs siècles."
+      },
+      {
+        "mot": "Déclinaison",
+        "definition": "La mesure de l'angle entre l'équateur céleste et la position d'un objet céleste sur la sphère céleste.",
+        "exemple": "La déclinaison est généralement mesurée en degrés, minutes et secondes d'arc."
+      },
+      {
+        "mot": "Diamètre",
+        "definition": "La distance à travers le centre d'un objet céleste, mesurée d'un point de sa surface à un autre, généralement en kilomètres ou en unités astronomiques.",
+        "exemple": "Le diamètre de la Terre est d'environ 12 742 kilomètres."
+      },
+      {
+        "mot": "Disque",
+        "definition": "Une structure plate et en forme de cercle d'un objet céleste, comme le disque solaire ou le disque galactique de notre Voie lactée.",
+        "exemple": "Le disque galactique de la Voie lactée est composé de milliards d'étoiles et de nuages de gaz et de poussière."
+      },
+      {
+        "mot": "Doppler",
+        "definition": "L'effet Doppler est le changement de fréquence perçu lorsque la source d'ondes (comme la lumière ou le son) se déplace par rapport à l'observateur, ce qui peut être utilisé pour déterminer le mouvement des objets célestes.",
+        "exemple": "L'effet Doppler est utilisé pour mesurer les vitesses radiales des étoiles en analysant le décalage vers le rouge ou le bleu de leur spectre lumineux."
+      },
+      {
+        "mot": "Éclipse",
+        "definition": "Un événement où un objet céleste est occulté ou obscurci par un autre objet céleste, comme une éclipse solaire où la Lune cache le Soleil.",
+        "exemple": "Une éclipse solaire totale se produit lorsque la Lune bloque entièrement la lumière du Soleil, créant une obscurité temporaire."
+      },
+      {
+        "mot": "Écliptique",
+        "definition": "Le plan apparent de l'orbite terrestre autour du Soleil, sur lequel se trouvent les positions des éclipses solaires potentielles.",
+        "exemple": "La plupart des planètes du système solaire orbitent près du plan de l'écliptique."
+      },
+      {
+        "mot": "Élongation",
+        "definition": "La distance angulaire entre un objet céleste, comme une planète, et le Soleil, mesurée depuis la Terre.",
+        "exemple": "L'élongation maximale de Mercure par rapport au Soleil est d'environ 28 degrés."
+      },
+      {
+        "mot": "Énergie",
+        "definition": "La capacité d'un système à effectuer un travail ou à produire un changement, telle que l'énergie radiative provenant des étoiles.",
+        "exemple": "Le Soleil produit de l'énergie par fusion nucléaire dans son noyau."
+      },
+      {
+        "mot": "Étoile",
+        "definition": "Un objet céleste qui émet sa propre lumière en raison de réactions nucléaires dans son noyau, et qui apparaît comme un point brillant dans le ciel nocturne.",
+        "exemple": "Notre Soleil est une étoile de taille moyenne située à environ 150 millions de kilomètres de la Terre."
+      },
+      {
+        "mot": "Étoile filante",
+        "definition": "Une trace lumineuse dans le ciel nocturne causée par la rentrée d'un petit corps céleste, tel qu'un météore, dans l'atmosphère terrestre.",
+        "exemple": "Les étoiles filantes sont souvent observées lors des pluies de météores, comme les Perséides en août."
+      },
+      {
+        "mot": "Étoile variable",
+        "definition": "Une étoile dont la luminosité varie périodiquement en raison de changements intrinsèques ou de phénomènes externes.",
+        "exemple": "L'étoile variable Bételgeuse dans la constellation d'Orion présente des variations de luminosité sur une période de quelques années."
+      },
+      {
+        "mot": "Exoplanète",
+        "definition": "Une planète qui orbite autour d'une étoile autre que notre Soleil, située en dehors de notre système solaire.",
+        "exemple": "Les exoplanètes offrent des possibilités d'étudier la diversité des systèmes planétaires dans l'Univers."
+      },
+      {
+        "mot": "Explosion stellaire",
+        "definition": "Un événement violent où une étoile libère une quantité énorme d'énergie, comme une supernova ou une explosion de nova.",
+        "exemple": "La supernova SN 1987A était une explosion stellaire qui a été observée dans le Grand Nuage de Magellan."
+      },
+      {
+        "mot": "Galaxie",
+        "definition": "Un vaste ensemble d'étoiles, de gaz, de poussière et de matière noire, lié par la gravité, qui forme une structure distincte dans l'Univers.",
+        "exemple": "Notre galaxie, la Voie lactée, contient des milliards d'étoiles et de nombreux systèmes solaires."
+      },
+      {
+        "mot": "Géante",
+        "definition": "Une étoile de grande taille et de haute luminosité, qui se trouve généralement dans une phase avancée de son évolution stellaire.",
+        "exemple": "L'étoile géante rouge Bételgeuse est l'une des étoiles les plus brillantes de la constellation d'Orion."
+      },
+      {
+        "mot": "Géocroiseur",
+        "definition": "Un astéroïde ou une comète dont l'orbite croise ou s'approche de l'orbite terrestre, présentant un risque potentiel de collision avec la Terre.",
+        "exemple": "Certains géocroiseurs sont surveillés de près en raison de leur trajectoire proche de notre planète."
+      },
+      {
+        "mot": "Géologie planétaire",
+        "definition": "L'étude des processus géologiques sur les planètes, les lunes et les autres objets célestes, ainsi que de leur histoire et de leur évolution.",
+        "exemple": "La géologie planétaire permet de mieux comprendre la formation et les caractéristiques des surfaces des planètes du système solaire."
+      },
+      {
+        "mot": "Gravité",
+        "definition": "La force d'attraction mutuelle entre les objets massifs, qui est responsable de l'orbite des planètes autour du Soleil et de la formation des galaxies.",
+        "exemple": "La gravité est une force fondamentale qui régit les mouvements des objets célestes dans l'Univers."
+      },
+      {
+        "mot": "Horizon",
+        "definition": "La ligne qui sépare le ciel visible et la Terre, apparaissant comme une ligne horizontale depuis un point d'observation donné.",
+        "exemple": "L'horizon est souvent utilisé comme référence pour mesurer l'altitude des objets célestes."
+      },
+      {
+        "mot": "Jupiter",
+        "definition": "La plus grande planète du système solaire, composée principalement de gaz et connue pour ses bandes nuageuses distinctives et sa grande tache rouge.",
+        "exemple": "Jupiter possède de nombreuses lunes, dont les quatre plus grandes sont appelées les lunes galiléennes."
+      },
+      {
+        "mot": "Lumière",
+        "definition": "Une forme de rayonnement électromagnétique qui est visible à l'œil humain et qui se propage à une vitesse de 299 792 kilomètres par seconde.",
+        "exemple": "La lumière émise par les étoiles voyage à travers l'espace pendant des années avant d'atteindre la Terre."
+      },
+      {
+        "mot": "Magnetosphère",
+        "definition": "La région autour d'une planète où son champ magnétique protège l'atmosphère des particules solaires chargées et des radiations dangereuses.",
+        "exemple": "La magnetosphère de la Terre aide à préserver notre atmosphère et à protéger la vie des effets néfastes du vent solaire."
+      },
+      {
+        "mot": "Mars",
+        "definition": "La quatrième planète du système solaire, souvent appelée la « planète rouge » en raison de sa couleur caractéristique.",
+        "exemple": "Mars est connue pour avoir des calottes polaires, des canyons géants et une atmosphère très mince."
+      },
+      {
+        "mot": "Masse",
+        "definition": "La quantité de matière contenue dans un objet, mesurée en kilogrammes, qui influence l'attraction gravitationnelle exercée sur les autres objets.",
+        "exemple": "La masse de la Terre est d'environ 5,97 × 10^24 kilogrammes."
+      },
+      {
+        "mot": "Météore",
+        "definition": "Un phénomène lumineux dans le ciel causé par la vaporisation d'un météoroïde lorsqu'il entre dans l'atmosphère terrestre, également appelé étoile filante.",
+        "exemple": "Les météores sont souvent observés lors des pluies de météores, où plusieurs météorites semblent provenir d'un point radiant commun."
+      },
+      {
+        "mot": "Météorite",
+        "definition": "Un morceau de roche ou de métal qui survit à son passage à travers l'atmosphère terrestre et atteint la surface de la Terre.",
+        "exemple": "Les météorites sont des vestiges de météoroïdes qui nous donnent des informations sur la composition des objets du système solaire."
+      },
+      {
+        "mot": "Météorologie",
+        "definition": "L'étude des phénomènes atmosphériques et des conditions météorologiques sur Terre, y compris les modèles climatiques et les prévisions météorologiques.",
+        "exemple": "La météorologie aide à prédire les conditions météorologiques à court terme et à comprendre les processus atmosphériques."
+      },
+      {
+        "mot": "Météoroïde",
+        "definition": "Un petit corps solide, tel qu'un morceau de roche ou de métal, qui orbite dans l'espace et qui peut devenir un météore lorsqu'il entre dans l'atmosphère terrestre.",
+        "exemple": "Les météoroïdes proviennent souvent de comètes ou de débris laissés par des collisions entre astéroïdes."
+      },
+      {
+        "mot": "Naine blanche",
+        "definition": "Le stade final de l'évolution d'une étoile de faible à moyenne masse, qui a épuisé son carburant nucléaire et s'est effondrée en un objet dense et chaud.",
+        "exemple": "Une naine blanche est principalement composée d'électrons dégénérés, et elle refroidira lentement au fil du temps."
+      },
+      {
+        "mot": "Naine brune",
+        "definition": "Un objet de masse intermédiaire entre une planète géante gazeuse et une étoile, qui est incapable de maintenir des réactions nucléaires stables dans son noyau.",
+        "exemple": "Les naines brunes sont souvent appelées des « étoiles ratées », car elles ne sont pas assez massives pour déclencher des réactions de fusion."
+      },
+      {
+        "mot": "Naine rouge",
+        "definition": "Une petite étoile de faible masse et de faible luminosité, qui se trouve dans la phase principale de fusion de l'hydrogène dans son noyau.",
+        "exemple": "Les naines rouges sont les étoiles les plus courantes dans l'Univers, et elles ont une durée de vie extrêmement longue."
+      },
+      {
+        "mot": "Naine rouge",
+        "definition": "Une petite étoile de faible masse et de faible luminosité, qui se trouve dans la phase principale de fusion de l'hydrogène dans son noyau.",
+        "exemple": "Les naines rouges sont les étoiles les plus courantes dans l'Univers, et elles ont une durée de vie extrêmement longue."
+      },
+      {
+        "mot": "Nébuleuse",
+        "definition": "Un nuage interstellaire composé de gaz et de poussière, qui peut être le lieu de formation d'étoiles et de systèmes planétaires.",
+        "exemple": "La nébuleuse d'Orion est une célèbre nébuleuse visible dans la constellation d'Orion."
+      },
+      {
+        "mot": "Nébuleuse planétaire",
+        "definition": "Un objet céleste constitué d'une enveloppe de gaz et de poussière éjectée par une étoile mourante, qui présente une apparence de disque ou d'anneau lumineux.",
+        "exemple": "La nébuleuse de l'Hélice est une nébuleuse planétaire remarquable dans la constellation du Verseau."
+      },
+      {
+        "mot": "Nébuleuse supernova",
+        "definition": "Une nébuleuse formée par les matériaux éjectés lors d'une explosion de supernova, qui peut être observée pendant un certain temps après l'explosion.",
+        "exemple": "La nébuleuse du Crabe est une nébuleuse supernova bien connue dans la constellation du Taureau."
+      },
+      {
+        "mot": "Neptune",
+        "definition": "La huitième planète du système solaire, qui est une géante gazeuse bleue et qui possède un système complexe de nuages et d'une grande tache sombre.",
+        "exemple": "Neptune est la planète la plus éloignée du Soleil et elle possède des vents extrêmement puissants."
+      },
+      {
+        "mot": "Néutron",
+        "definition": "Une particule subatomique présente dans le noyau des atomes, qui n'a pas de charge électrique et qui contribue à la stabilité des étoiles à neutrons.",
+        "exemple": "Les étoiles à neutrons sont d'incroyablement denses, avec une masse comparable à celle du Soleil comprimée dans une sphère de seulement quelques kilomètres de diamètre."
+      },
+      {
+        "mot": "Nova",
+        "definition": "Une explosion thermonucléaire périodique sur la surface d'une étoile naine blanche, qui entraîne une augmentation soudaine de sa luminosité.",
+        "exemple": "Une nova peut devenir suffisamment lumineuse pour être visible depuis la Terre pendant quelques jours ou semaines."
+      },
+      {
+        "mot": "Nuage moléculaire",
+        "definition": "Un nuage interstellaire dense composé de molécules, de poussière et de gaz, qui peut être le lieu de formation d'étoiles.",
+        "exemple": "Les nuages moléculaires sont des régions de l'espace où de nouvelles étoiles naissent."
+      },
+      {
+        "mot": "Observatoire",
+        "definition": "Un lieu équipé d'instruments d'observation astronomique, où les astronomes peuvent étudier les objets célestes et recueillir des données.",
+        "exemple": "L'observatoire du mont Palomar en Californie abrite l'un des plus grands télescopes optiques du monde."
+      },
+      {
+        "mot": "Occultation",
+        "definition": "Le phénomène lorsqu'un objet céleste est caché ou obscurci par un autre objet céleste, généralement lors d'un passage devant une étoile ou une planète.",
+        "exemple": "L'occultation d'une étoile par la Lune est un événement astronomique intéressant à observer."
+      },
+      {
+        "mot": "Oort (Nuage d')",
+        "definition": "Un nuage hypothétique de comètes situé aux confins du système solaire, qui est considéré comme la source des comètes à longue période.",
+        "exemple": "Le nuage d'Oort est nommé d'après l'astronome Jan Oort, qui a proposé son existence."
+      },
+      {
+        "mot": "Orbite",
+        "definition": "La trajectoire courbe suivie par un objet céleste autour d'un autre objet sous l'influence de la gravité.",
+        "exemple": "La Lune orbite autour de la Terre, tandis que les planètes orbite autour du Soleil."
+      },
+      {
+        "mot": "Parallaxe",
+        "definition": "La variation apparente de la position d'un objet lorsque l'observateur change de point de vue, utilisée pour mesurer les distances des étoiles.",
+        "exemple": "La parallaxe stellaire est utilisée pour déterminer la distance des étoiles les plus proches de la Terre."
+      },
+      {
+        "mot": "Périhélie",
+        "definition": "Le point de l'orbite d'un objet en orbite autour du Soleil où il est le plus proche de celui-ci.",
+        "exemple": "La Terre atteint son périhélie en janvier, lorsque notre planète est la plus proche du Soleil."
+      },
+      {
+        "mot": "Période de révolution",
+        "definition": "Le temps nécessaire à un objet céleste pour effectuer une révolution complète autour d'un autre objet.",
+        "exemple": "La période de révolution de la Terre est d'environ 365,25 jours, ce qui correspond à une année."
+      },
+      {
+        "mot": "Période de rotation",
+        "definition": "Le temps nécessaire à un objet céleste pour effectuer une rotation complète sur son axe.",
+        "exemple": "La période de rotation de la Terre est d'environ 24 heures, ce qui correspond à un jour."
+      },
+      {
+        "mot": "Phase",
+        "definition": "La fraction de la surface éclairée d'un objet céleste, telle qu'elle est vue depuis un observateur donné.",
+        "exemple": "La Lune passe par différentes phases, de la nouvelle lune à la pleine lune et vice versa."
+      },
+      {
+        "mot": "Photométrie",
+        "definition": "La mesure quantitative de l'intensité de la lumière émise ou réfléchie par un objet céleste, utilisée pour étudier ses propriétés physiques.",
+        "exemple": "La photométrie permet de déterminer la luminosité et la couleur des étoiles, des galaxies et d'autres objets astronomiques."
+      },
+      {
+        "mot": "Planète",
+        "definition": "Un corps céleste en orbite autour d'une étoile, qui est suffisamment massif pour être sphérique et qui a dégagé son orbite des autres débris.",
+        "exemple": "Le système solaire compte huit planètes, dont la Terre, Mars, Jupiter et Neptune."
+      },
+      {
+        "mot": "Planète géante",
+        "definition": "Une planète de grande taille et de masse élevée, principalement composée de gaz, comme Jupiter et Saturne.",
+        "exemple": "Les planètes géantes sont souvent appelées des « géantes gazeuses » en raison de leur composition."
+      },
+      {
+        "mot": "Planète naine",
+        "definition": "Un objet céleste en orbite autour du Soleil qui est suffisamment massif pour être sphérique, mais qui n'a pas dégagé son orbite des autres débris.",
+        "exemple": "Pluton a été reclassée en tant que planète naine en 2006, mais elle reste un objet intéressant à étudier."
+      },
+      {
+        "mot": "Plasma",
+        "definition": "Un état de la matière constitué de particules chargées, telles que des ions et des électrons, qui se comporte différemment des solides, des liquides et des gaz.",
+        "exemple": "Le plasma est présent dans de nombreux phénomènes astrophysiques, comme les éruptions solaires et les nébuleuses."
+      },
+      {
+        "mot": "Pleine lune",
+        "definition": "La phase de la Lune lorsqu'elle est complètement éclairée du côté visible depuis la Terre.",
+        "exemple": "La pleine lune est un moment où la Lune apparaît lumineuse et ronde dans le ciel nocturne."
+      },
+      {
+        "mot": "Pluie de météores",
+        "definition": "Un phénomène où de nombreux météores semblent provenir d'un même point radiant dans le ciel, généralement causé par le passage de la Terre à travers les débris laissés par une comète.",
+        "exemple": "Les pluies de météores, comme les Perséides en août, offrent un spectacle céleste impressionnant."
+      },
+      {
+        "mot": "Pôle céleste",
+        "definition": "Le point imaginaire où l'axe de rotation de la Terre prolongé vers le ciel rencontre la sphère céleste.",
+        "exemple": "L'étoile Polaire est située près du pôle céleste nord et sert de repère pour la navigation astronomique."
+      },
+      {
+        "mot": "Précession",
+        "definition": "Le mouvement lent du point vernal et des points d'équinoxe, qui se produit en raison de l'influence gravitationnelle de la Lune et du Soleil sur l'aplatissement de la Terre.",
+        "exemple": "La précession des équinoxes entraîne un changement lent mais continu de la position des étoiles dans le ciel au fil des millénaires."
+      },
+      {
+        "mot": "Protostar",
+        "definition": "Un stade précoce de formation d'une étoile, où une masse de gaz et de poussière s'effondre gravitationnellement sous son propre poids.",
+        "exemple": "Les protostars sont souvent entourées de disques d'accrétion, où la matière se rassemble pour former une étoile."
+      },
+      {
+        "mot": "Quasar",
+        "definition": "Une source extrêmement lumineuse située au centre d'une galaxie active, émettant des quantités énormes d'énergie.",
+        "exemple": "Les quasars sont les objets les plus lumineux de l'Univers et sont alimentés par des trous noirs supermassifs."
+      },
+      {
+        "mot": "Radioastronomie",
+        "definition": "La branche de l'astronomie qui étudie les objets célestes en utilisant les ondes radio émises ou réfléchies par eux.",
+        "exemple": "La radioastronomie permet d'étudier les émissions radio provenant de sources cosmiques, telles que les pulsars et les galaxies."
+      },
+      {
+        "mot": "Réfraction",
+        "definition": "La déviation de la trajectoire d'une onde lorsque celle-ci passe d'un milieu à un autre avec une densité différente.",
+        "exemple": "La réfraction de la lumière dans l'atmosphère terrestre est responsable de phénomènes optiques tels que les arcs-en-ciel et les mirages."
+      },
+      {
+        "mot": "Réflecteur",
+        "definition": "Un type de télescope qui utilise un miroir courbe pour collecter et focaliser la lumière des objets célestes.",
+        "exemple": "Les télescopes réflecteurs sont couramment utilisés en astronomie professionnelle et amateur pour leur capacité à capturer des images détaillées."
+      },
+      {
+        "mot": "Réfracteur",
+        "definition": "Un type de télescope qui utilise des lentilles pour collecter et focaliser la lumière des objets célestes.",
+        "exemple": "Les télescopes réfracteurs sont appréciés pour leur capacité à produire des images nettes et contrastées des objets astronomiques."
+      },
+      {
+        "mot": "Rotation",
+        "definition": "Le mouvement d'un objet céleste qui tourne sur son axe central.",
+        "exemple": "La rotation de la Terre provoque l'alternance des jours et des nuits."
+      },
+      {
+        "mot": "Spectre",
+        "definition": "La répartition de l'intensité lumineuse d'un objet en fonction de la longueur d'onde.",
+        "exemple": "L'étude du spectre électromagnétique permet aux astronomes de déduire des informations sur la composition et la température des objets célestes."
+      },
+      {
+        "mot": "Supernova",
+        "definition": "Une explosion cataclysmique se produisant à la fin de la vie d'une étoile massive, qui peut brièvement surpasser la luminosité d'une galaxie entière.",
+        "exemple": "Les supernovae jouent un rôle crucial dans la production d'éléments lourds et dispersent ces éléments dans l'espace interstellaire."
+      },
+      {
+        "mot": "Système solaire",
+        "definition": "Le système planétaire qui comprend le Soleil et tous les objets célestes en orbite autour de celui-ci, tels que les planètes, les lunes, les astéroïdes et les comètes.",
+        "exemple": "Notre système solaire comprend huit planètes, une ceinture d'astéroïdes et un certain nombre de comètes et de corps transneptuniens."
+      },
+      {
+        "mot": "Tache solaire",
+        "definition": "Une région sombre et relativement plus froide de la surface du Soleil, qui est causée par des champs magnétiques intenses.",
+        "exemple": "Les taches solaires sont associées à des éruptions solaires et peuvent affecter l'activité solaire et les conditions météorologiques spatiales."
+      },
+      {
+        "mot": "Télescope",
+        "definition": "Un instrument d'observation qui collecte la lumière ou d'autres formes de rayonnement électromagnétique en provenance des objets célestes et les amplifie pour permettre une observation détaillée.",
+        "exemple": "Les télescopes sont utilisés pour étudier les étoiles, les planètes, les galaxies et d'autres objets astronomiques."
+      },
+      {
+        "mot": "Télescope spatial",
+        "definition": "Un télescope placé en orbite autour de la Terre pour éliminer les interférences atmosphériques et permettre une observation plus précise de l'espace lointain.",
+        "exemple": "Le télescope spatial Hubble est l'un des télescopes spatiaux les plus célèbres, ayant fourni d'innombrables images et données astronomiques."
+      },
+      {
+        "mot": "Terre",
+        "definition": "La troisième planète du système solaire et notre planète d'origine, qui abrite une grande variété de formes de vie.",
+        "exemple": "La Terre est la seule planète connue où l'on trouve de l'eau liquide à la surface et qui présente des conditions propices à la vie."
+      },
+      {
+        "mot": "Transit",
+        "definition": "Le passage apparent d'un objet céleste devant un autre objet plus éloigné, lorsqu'il est vu depuis un observateur donné.",
+        "exemple": "Un transit planétaire se produit lorsque une planète passe devant le disque du Soleil, créant un petit point sombre visible depuis la Terre."
+      },
+      {
+        "mot": "Univers",
+        "definition": "La totalité de l'espace, du temps, de la matière et de l'énergie, ainsi que les lois et principes qui les régissent.",
+        "exemple": "L'Univers est immense et en constante expansion, abritant une variété incroyable de galaxies, d'étoiles, de planètes et d'autres objets célestes."
+      },
+      {
+        "mot": "Variabilité",
+        "definition": "La propriété d'un objet céleste qui présente des variations de luminosité, de température ou d'autres caractéristiques sur une certaine période de temps.",
+        "exemple": "Certains types d'étoiles, comme les variables Céphéides, présentent une variabilité intrinsèque, ce qui permet de les utiliser comme indicateurs de distance."
+      },
+      {
+        "mot": "Voie lactée",
+        "definition": "La galaxie dans laquelle se trouve notre système solaire, qui est une vaste collection d'étoiles, de gaz, de poussière et de matière noire.",
+        "exemple": "La Voie lactée est une galaxie spirale contenant des centaines de milliards d'étoiles, ainsi que de nombreux systèmes planétaires potentiels."
+      },
+      {
+        "mot": "Vortex",
+        "definition": "Un tourbillon de gaz ou de poussière dans l'espace, généralement observé dans les nébuleuses ou les disques protoplanétaires.",
+        "exemple": "Les vortex sont des structures fascinantes qui se forment dans les environnements astrophysiques soumis à des forces de rotation."
+      },
+      {
+        "mot": "Zénith",
+        "definition": "Le point du ciel situé directement au-dessus de la tête d'un observateur, dans une direction perpendiculaire à l'horizon.",
+        "exemple": "Lorsque vous regardez le zénith, vous regardez directement vers le haut, à 90 degrés par rapport à l'horizon."
+      },
+      {
+        "mot": "Zodiaque",
+        "definition": "La bande étroite du ciel dans laquelle se trouvent les orbites apparentes du Soleil, de la Lune et des planètes.",
+        "exemple": "Les signes du zodiaque sont basés sur les constellations qui se trouvent le long du zodiaque."
+      }
+    ]
+  }
