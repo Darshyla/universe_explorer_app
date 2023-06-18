@@ -390,61 +390,61 @@
         "questions": [
           {
             "question": "Quel est cet objet céleste ?",
-            "image": "lien_vers_l_image_1",
+            "image": "assets/images/quizz/galaxieSpirale.jpg",
             "options": ["Galaxie spirale", "Nébuleuse", "Amas d'étoiles", "Planète"],
             "answer": 0
           },
           {
             "question": "Quelle est cette constellation ?",
-            "image": "lien_vers_l_image_2",
+            "image": "assets/images/quizz/andromede_constellation.png",
             "options": ["Orion", "Andromède", "Pégase", "Ursa Major"],
             "answer": 1
           },
           {
             "question": "Quelle est cette planète du système solaire ?",
-            "image": "lien_vers_l_image_3",
+            "image": "assets/images/quizz/saturne.jpeg",
             "options": ["Jupiter", "Vénus", "Saturne", "Mars"],
             "answer": 2
           },
           {
             "question": "Quel est cet événement astronomique ?",
-            "image": "lien_vers_l_image_4",
-            "options": ["Éclipse solaire", "Aurore boréale", "Comète", "Pluie d'étoiles filantes"],
+            "image": "assets/images/quizz/Comet_Halley.jpg",
+            "options": ["Éclipse solaire", "Aurore boréale", "Pluie d'étoiles filantes", "Passage d'un comète"],
             "answer": 3
           },
           {
             "question": "Quel est cet objet céleste ?",
-            "image": "lien_vers_l_image_5",
-            "options": ["Quasar", "Supernova", "Pulsar", "Étoile binaire"],
+            "image": "assets/images/quizz/quasar.jpeg",
+            "options": ["Supernova", "Quasar", "Pulsar", "Étoile binaire"],
             "answer": 1
           },
           {
             "question": "Quelle est cette nébuleuse célèbre ?",
-            "image": "lien_vers_l_image_6",
+            "image": "assets/images/nebuleuse_galaxie/nebuleuse_de_laigle.jpeg",
             "options": ["Nébuleuse d'Orion", "Nébuleuse du Crabe", "Nébuleuse de l'Aigle", "Nébuleuse d'Hélix"],
-            "answer": 0
+            "answer": 2
           },
           {
             "question": "Quel est cet objet céleste ?",
-            "image": "lien_vers_l_image_7",
-            "options": ["Galaxie elliptique", "Amas de galaxies", "Nébuleuse planétaire", "Trous noirs supermassifs"],
+            "image": "assets/images/nebuleuse_galaxie/nebuleuse_du_papillon.jpg",
+            "options": ["Galaxie elliptique", "Amas de galaxies", "Nébuleuse papillon", "Trous noirs supermassifs"],
             "answer": 2
           },
           {
             "question": "Quelle est cette planète naine du système solaire ?",
-            "image": "lien_vers_l_image_8",
+            "image": "assets/images/planete_comete/pluton.jpeg",
             "options": ["Pluton", "Mercure", "Cérès", "Éris"],
             "answer": 0
           },
           {
             "question": "Quelle est cette étoile célèbre ?",
-            "image": "lien_vers_l_image_9",
-            "options": ["Betelgeuse", "Sirius", "Alpha Centauri", "Véga"],
+            "image": "assets/images/quizz/betelgeuse.jpeg",
+            "options": ["Sirius", "Betelgeuse", "Alpha Centauri", "Véga"],
             "answer": 1
           },
           {
             "question": "Quel est cet objet céleste ?",
-            "image": "lien_vers_l_image_10",
+            "image": "assets/images/quizz/amas_globulaire.jpg",
             "options": ["Nébuleuse sombre", "Quasar", "Nébuleuse planétaire", "Amas globulaire"],
             "answer": 3
           }

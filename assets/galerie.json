@@ -1,33 +1,67 @@
 [
-    {
-      "title": "Nébuleuses et galaxies",
-      "image": "assets/images/gallery_home/nebuleuse_et_galaxie.jpg",
-      "direction": "Lexique"
-    },
-    {
-      "title": "Planètes, comètes et astéroïdes",
-      "image": "assets/images/gallery_home/comete.jpg",
-      "direction": "Lexique"
-        },
-    {
-      "title": "Etoiles et constellations",
-      "image": "assets/images/gallery_home/constellations2.jpg",
-      "direction": "Lexique"
-    },
-    {
-      "title": "Astronautes et missions spatiales",
-      "image": "assets/images/gallery_home/astronaute.jpg",
-      "direction": "Lexique"
-    },
-    {
-      "title": "Phénomènes célèstes spéciaux",
-      "image": "assets/images/phenomene_celeste/pluie_detoile.jpg",
-      "direction":"Lexique"
-    },
-    {
-      "title": "Instruments astronomiques",
-      "image": "assets/images/gallery_home/instrument.jpg",
-      "direction":"Lexique"
-    }
-  ]
-  
+  {
+    "title": "Galaxies",
+    "url": "galaxy"
+  },
+  {
+    "title": "Nebuleuses",
+    "url": "nebulae"
+  },
+  {
+    "title": "Lune",
+    "url": "moon"
+  },
+  {
+    "title": "Terre",
+    "url": "earth"
+  },
+  {
+    "title": "Planètes",
+    "url": "planet"
+  },
+  {
+    "title": "Comètes",
+    "url": "comet"
+  },
+  {
+    "title": "Asteroïdes",
+    "url": "asteroid"
+  },
+  {
+    "title": "Etoiles",
+    "url": "star"
+  },
+  {
+    "title": "Hubble",
+    "url": "hubble"
+  },
+  {
+    "title": "Astronautes",
+    "url": "astronaut"
+  },
+  {
+    "title": "Missions spatiales",
+    "url": "mission"
+  },
+  {
+    "title": "Instruments astronomiques",
+    "url": "instrument"
+  },
+  {
+    "title": "Système solaire",
+    "url": "solarsystem"
+  },
+  {
+    "title": "Trous noirs",
+    "url": "blackhole"
+  },
+  {
+    "title": "Supernovas",
+    "url": "supernovae"
+  },
+  {
+    "title": "Exoplanètes",
+    "url": "exoplanet"
+  }
+
+]

@@ -3,6 +3,30 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
 
+class Question {
+  final String question;
+  final String? image;
+  final List<String> options;
+  final int answer;
+  int? selectedOption;
+
+  Question({
+    required this.question,
+    this.image,
+    required this.options,
+    required this.answer,
+    this.selectedOption,
+  });
+
+  factory Question.fromJson(Map<String, dynamic> json) {
+    return Question(
+      question: json['question'],
+      image: json['image'],
+      options: List<String>.from(json['options']),
+      answer: json['answer'],
+    );
+  }
+}
 
 class CategoryList extends StatelessWidget {
   final List<String> categories = [
@@ -151,31 +175,6 @@ class _CategoryPageState extends State<CategoryPage> {
   }
 }
 
-class Question {
-  final String question;
-  final String? image;
-  final List<String> options;
-  final int answer;
-  int? selectedOption;
-
-  Question({
-    required this.question,
-    this.image,
-    required this.options,
-    required this.answer,
-    this.selectedOption,
-  });
-
-  factory Question.fromJson(Map<String, dynamic> json) {
-    return Question(
-      question: json['question'],
-      image: json['image'],
-      options: List<String>.from(json['options']),
-      answer: json['answer'],
-    );
-  }
-}
-
 class QuestionCard extends StatelessWidget {
   final Question question;
   final ValueChanged<int?> onOptionSelected;
@@ -201,7 +200,6 @@ class QuestionCard extends StatelessWidget {
             if (question.image != null) // Display the image if available
               Image.asset(
                 question.image!,
-                height: 150,
                 width: double.infinity,
                 fit: BoxFit.cover,
               ),

@@ -39,6 +39,10 @@ dependencies:
     sdk: flutter
   flutter:
     sdk: flutter
+  flutter_downloader: ^1.6.1
+  path_provider: ^2.0.5
+  webview_flutter: ^2.2.0
+  video_player: ^2.2.5
     
 
 
@@ -160,6 +164,14 @@ flutter:
     - assets/images/Intro_screen/galerie.webp
     - assets/images/Intro_screen/lexique.webp
     - assets/images/Intro_screen/quizz.webp
+    - assets/images/quizz/saturne.jpeg
+    - assets/images/quizz/quasar.jpeg
+    - assets/images/quizz/galaxieSpirale.jpg
+    - assets/images/quizz/Comet_Halley.jpg
+    - assets/images/quizz/betelgeuse.jpeg
+    - assets/images/quizz/andromedre_galaxy.jpg
+    - assets/images/quizz/andromede_constellation.png
+    - assets/images/quizz/amas_globulaire.jpg
 
     
 
