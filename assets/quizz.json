@@ -1,462 +1,456 @@
 {
     "categories": [
       {
-        "category": "Énigmes astronomiques",
+        "category": "Astronomical Riddles",
         "questions": [
-          {
-            "question": "Quelle est la planète la plus proche du Soleil ?",
-            "options": ["Vénus", "Mercure", "Mars", "Jupiter"],
-            "answer": 1
-          },
-          {
-            "question": "Quel est le nom de la première femme astronaute à avoir marché sur la Lune ?",
-            "options": ["Sandra Johnson", "Linda Davis", "Emma Smith", "Aucune femme n'a marché sur la Lune"],
-            "answer": 3
-          },
-          {
-            "question": "Quelle est la plus grande planète du système solaire ?",
-            "options": ["Jupiter", "Saturne", "Uranus", "Neptune"],
-            "answer": 0
-          },
-          {
-            "question": "Quelle planète est surnommée la \"planète rouge\" ?",
-            "options": ["Vénus", "Mars", "Jupiter", "Uranus"],
-            "answer": 1
-          },
-          {
-            "question": "Qu'est-ce qu'un astéroïde ?",
-            "options": ["Un type d'étoile", "Une planète naine", "Une petite planète rocheuse", "Un type de comète"],
-            "answer": 2
-          },
-          {
-            "question": "Quelle est la planète la plus éloignée du Soleil dans notre système solaire ?",
-            "options": ["Neptune", "Pluton", "Saturne", "Uranus"],
-            "answer": 0
-          },
-          {
-            "question": "Qu'est-ce qu'une éclipse solaire ?",
-            "options": ["Quand la Lune passe devant le Soleil", "Quand la Terre passe devant le Soleil", "Quand la Lune passe devant la Terre", "Quand le Soleil passe devant la Lune"],
-            "answer": 0
-          },
-          {
-            "question": "Quelle est la constellation qui comprend l'étoile Polaire ?",
-            "options": ["La Grande Ourse", "Orion", "Cassiopée", "Le Scorpion"],
-            "answer": 0
-          },
-          {
-            "question": "Quelle est la plus petite planète du système solaire ?",
-            "options": ["Mercure", "Vénus", "Mars", "Terre"],
-            "answer": 0
-          },
-          {
-            "question": "Qu'est-ce qu'un trou noir ?",
-            "options": ["Une étoile très brillante", "Une région de l'espace avec une forte gravité", "Une planète avec une atmosphère dense", "Un type de comète"],
-            "answer": 1
-          }
+        {
+        "question": "Which is the closest planet to the Sun?",
+        "options": ["Venus", "Mercury", "Mars", "Jupiter"],
+        "answer": 1
+        },
+        {
+        "question": "What is the name of the first female astronaut to have walked on the Moon?",
+        "options": ["Sandra Johnson", "Linda Davis", "Emma Smith", "No woman has walked on the Moon"],
+        "answer": 3
+        },
+        {
+        "question": "Which is the largest planet in the solar system?",
+        "options": ["Jupiter", "Saturn", "Uranus", "Neptune"],
+        "answer": 0
+        },
+        {
+        "question": "Which planet is nicknamed the \"Red Planet\"?",
+        "options": ["Venus", "Mars", "Jupiter", "Uranus"],
+        "answer": 1
+        },
+        {
+        "question": "What is an asteroid?",
+        "options": ["A type of star", "A dwarf planet", "A small rocky planet", "A type of comet"],
+        "answer": 2
+        },
+        {
+        "question": "Which is the farthest planet from the Sun in our solar system?",
+        "options": ["Neptune", "Pluto", "Saturn", "Uranus"],
+        "answer": 0
+        },
+        {
+        "question": "What is a solar eclipse?",
+        "options": ["When the Moon passes in front of the Sun", "When the Earth passes in front of the Sun", "When the Moon passes in front of the Earth", "When the Sun passes in front of the Moon"],
+        "answer": 0
+        },
+        {
+        "question": "Which constellation includes the North Star?",
+        "options": ["Ursa Major (the Big Dipper)", "Orion", "Cassiopeia", "Scorpius"],
+        "answer": 0
+        },
+        {
+        "question": "Which is the smallest planet in the solar system?",
+        "options": ["Mercury", "Venus", "Mars", "Earth"],
+        "answer": 0
+        },
+        {
+        "question": "What is a black hole?",
+        "options": ["A very bright star", "An area in space with strong gravity", "A planet with a dense atmosphere", "A type of comet"],
+        "answer": 1
+        }
         ]
-      },
-      {
-        "category": "Calculs d'échelle",
-        "questions": [
+        },
+        {
+          "category": "Scale Calculations",
+          "questions": [
           {
-            "question": "Si la Terre avait la taille d'une balle de tennis, quelle serait la taille relative du Soleil ?",
-            "options": ["Une balle de golf", "Un ballon de football", "Un ballon de basket", "Un ballon de baudruche"],
-            "answer": 2
+          "question": "If the Earth were the size of a tennis ball, what would be the relative size of the Sun?",
+          "options": ["A golf ball", "A football", "A basketball", "A balloon"],
+          "answer": 2
           },
           {
-            "question": "Quelle est la distance moyenne entre la Terre et la Lune ?",
-            "options": ["384 400 km", "150 000 km", "1 000 000 km", "500 000 km"],
-            "answer": 0
+          "question": "What is the average distance between the Earth and the Moon?",
+          "options": ["384,400 km", "150,000 km", "1,000,000 km", "500,000 km"],
+          "answer": 0
           },
           {
-            "question": "Si le Soleil était représenté par une sphère de 1 mètre de diamètre, quelle serait la taille de la Terre à l'échelle ?",
-            "options": ["Une bille de 1 centimètre de diamètre", "Une bille de 10 centimètres de diamètre", "Une bille de 1 millimètre de diamètre", "Une bille de 10 millimètres de diamètre"],
-            "answer": 3
+          "question": "If the Sun were represented by a sphere with a 1-meter diameter, what would be the size of the Earth at scale?",
+          "options": ["A 1-centimeter diameter marble", "A 10-centimeter diameter marble", "A 1-millimeter diameter marble", "A 10-millimeter diameter marble"],
+          "answer": 3
           },
           {
-            "question": "Si l'étoile la plus proche du Soleil était représentée par un grain de sable, quelle serait la distance relative entre le grain de sable et le Soleil à l'échelle ?",
-            "options": ["Quelques centimètres", "Quelques mètres", "Quelques kilomètres", "Quelques dizaines de kilomètres"],
-            "answer": 2
+          "question": "If the closest star to the Sun were represented by a grain of sand, what would be the relative distance between the grain of sand and the Sun at scale?",
+          "options": ["A few centimeters", "A few meters", "A few kilometers", "A few tens of kilometers"],
+          "answer": 2
           },
           {
-            "question": "Si une galaxie était représentée par un ballon de football, quelle serait la taille relative d'une étoile dans cette galaxie ?",
-            "options": ["Une tête d'épingle", "Un grain de riz", "Une balle de tennis", "Un grain de sable"],
-            "answer": 0
+          "question": "If a galaxy were represented by a football, what would be the relative size of a star in that galaxy?",
+          "options": ["A pinhead", "A grain of rice", "A tennis ball", "A grain of sand"],
+          "answer": 0
           },
           {
-            "question": "Quelle est la taille relative d'un trou noir supermassif par rapport à notre système solaire ?",
-            "options": ["La taille d'une balle de golf", "La taille d'un immeuble de 10 étages", "La taille d'une ville", "La taille d'un pays"],
-            "answer": 2
+          "question": "What is the relative size of a supermassive black hole compared to our solar system?",
+          "options": ["The size of a golf ball", "The size of a 10-story building", "The size of a city", "The size of a country"],
+          "answer": 2
           },
           {
-            "question": "Si la Voie lactée était représentée par un disque de 1 mètre de diamètre, quelle serait la taille de notre système solaire à l'échelle ?",
-            "options": ["Un grain de sable", "Un grain de riz", "Un grain de maïs", "Un grain de blé"],
-            "answer": 0
+          "question": "If the Milky Way were represented by a 1-meter diameter disk, what would be the size of our solar system at scale?",
+          "options": ["A grain of sand", "A grain of rice", "A kernel of corn", "A grain of wheat"],
+          "answer": 0
           },
           {
-            "question": "Si la distance entre la Terre et le Soleil était représentée par 1 centimètre, quelle serait la distance relative entre la Terre et la planète Mars à l'échelle ?",
-            "options": ["Moins d'1 millimètre", "1 millimètre", "10 centimètres", "1 mètre"],
-            "answer": 3
+          "question": "If the distance between the Earth and the Sun were represented by 1 centimeter, what would be the relative distance between the Earth and the planet Mars at scale?",
+          "options": ["Less than 1 millimeter", "1 millimeter", "10 centimeters", "1 meter"],
+          "answer": 3
           },
           {
-            "question": "Si la distance entre la Terre et le Soleil était représentée par 1 mètre, quelle serait la distance relative entre le Soleil et l'étoile la plus proche à l'échelle ?",
-            "options": ["Plusieurs kilomètres", "Plusieurs centaines de kilomètres", "Plusieurs milliers de kilomètres", "Plusieurs millions de kilomètres"],
-            "answer": 3
+          "question": "If the distance between the Earth and the Sun were represented by 1 meter, what would be the relative distance between the Sun and the closest star at scale?",
+          "options": ["Several kilometers", "Several hundreds of kilometers", "Several thousands of kilometers", "Several millions of kilometers"],
+          "answer": 3
           },
           {
-            "question": "Si la distance entre la Terre et le Soleil était représentée par 1 millimètre, quelle serait la taille relative du Soleil à l'échelle ?",
-            "options": ["Plusieurs centimètres", "Plusieurs dizaines de centimètres", "Plusieurs mètres", "Plusieurs dizaines de mètres"],
-            "answer": 2
+          "question": "If the distance between the Earth and the Sun were represented by 1 millimeter, what would be the relative size of the Sun at scale?",
+          "options": ["Several centimeters", "Several tens of centimeters", "Several meters", "Several tens of meters"],
+          "answer": 2
           }
-        ]
-      },
-      {
-        "category": "Jeux de mots",
-        "questions": [
+          ]
+          },
           {
-            "question": "Qu'est-ce qu'un astronaute dit lorsqu'il achète une maison ?",
-            "options": ["L'espace est incroyable !", "J'ai besoin d'un terrain plus grand pour mes fusées.", "Cette maison est vraiment stellaire.", "Je vais me lancer dans l'immobilier cosmique."],
+            "category": "Wordplay",
+            "questions": [
+            {
+            "question": "What does an astronaut say when buying a house?",
+            "options": ["Space is incredible!", "I need a bigger yard for my rockets.", "This house is truly stellar.", "I'm getting into cosmic real estate."],
             "answer": 2
-          },
-          {
-            "question": "Qu'est-ce qu'un astronome porte pour être élégant ?",
-            "options": ["Un smoking cosmique", "Une cravate en forme de planète", "Une chemise parsemée d'étoiles", "Des chaussures en forme de fusées"],
+            },
+            {
+            "question": "What does an astronomer wear to be elegant?",
+            "options": ["A cosmic tuxedo", "A planet-shaped tie", "A shirt sprinkled with stars", "Rocket-shaped shoes"],
             "answer": 0
-          },
-          {
-            "question": "Pourquoi les astronomes sont-ils de bons convives ?",
-            "options": ["Parce qu'ils savent toujours apporter la bonne étoile.", "Parce qu'ils connaissent toutes les galaxies du goût.", "Parce qu'ils peuvent lire dans les étoiles pour savoir ce que les gens aiment.", "Parce qu'ils peuvent créer des cocktails cosmiques."],
+            },
+            {
+            "question": "Why are astronomers good dinner guests?",
+            "options": ["Because they always bring the right star.", "Because they know all the galaxies of taste.", "Because they can read the stars to know what people like.", "Because they can create cosmic cocktails."],
             "answer": 1
-          },
-          {
-            "question": "Pourquoi les étoiles ne sont-elles jamais seules ?",
-            "options": ["Parce qu'elles sont toutes accompagnées de leurs fans.", "Parce qu'elles sont trop brillantes pour être solitaires.", "Parce qu'elles aiment organiser des fêtes célestes.", "Parce qu'elles ont peur du noir."],
+            },
+            {
+            "question": "Why are stars never alone?",
+            "options": ["Because they are all accompanied by their fans.", "Because they are too bright to be solitary.", "Because they love to throw celestial parties.", "Because they are afraid of the dark."],
             "answer": 3
-          },
-          {
-            "question": "Qu'est-ce qu'un extraterrestre dit lorsqu'il rencontre une personne drôle ?",
-            "options": ["Tu es venu de quelle galaxie ?", "Tu m'as fait rire jusqu'à la Voie lactée.", "Tu dois être la comédie la plus populaire dans tout l'univers.", "Je vais te kidnapper pour divertir ma planète."],
+            },
+            {
+            "question": "What does an extraterrestrial say when meeting a funny person?",
+            "options": ["Which galaxy are you from?", "You made me laugh all the way to the Milky Way.", "You must be the most popular comedy in the entire universe.", "I'm going to abduct you to entertain my planet."],
             "answer": 1
-          },
-          {
-            "question": "Pourquoi les étoiles ne se disputent-elles jamais ?",
-            "options": ["Parce qu'elles ont des relations cordiales.", "Parce qu'elles brillent trop pour se fâcher.", "Parce qu'elles ont toutes le même objectif céleste.", "Parce qu'elles communiquent par signaux lumineux pacifiques."],
+            },
+            {
+            "question": "Why do stars never argue?",
+            "options": ["Because they have cordial relationships.", "Because they shine too much to get angry.", "Because they all have the same celestial goal.", "Because they communicate through peaceful light signals."],
             "answer": 2
-          },
-          {
-            "question": "Quel est le plat préféré des astronautes ?",
-            "options": ["Les étoiles de mer", "La soupe aux étoiles", "Le gâteau aux astéroïdes", "Les spaghettis galactiques"],
+            },
+            {
+            "question": "What is an astronaut's favorite dish?",
+            "options": ["Starfish", "Star soup", "Asteroid cake", "Galactic spaghetti"],
             "answer": 1
-          },
-          {
-            "question": "Pourquoi les astronomes ne mangent-ils jamais seuls ?",
-            "options": ["Parce qu'ils ont toujours des constellations culinaires.", "Parce qu'ils partagent toujours leur repas avec des extraterrestres.", "Parce qu'ils aiment discuter des mystères de l'univers pendant le dîner.", "Parce qu'ils ont besoin d'un compagnon de table pour observer le ciel ensemble."],
+            },
+            {
+            "question": "Why do astronomers never eat alone?",
+            "options": ["Because they always have culinary constellations.", "Because they always share their meal with aliens.", "Because they enjoy discussing the mysteries of the universe over dinner.", "Because they need a table companion to observe the sky together."],
             "answer": 3
-          },
-          {
-            "question": "Qu'est-ce qu'un astronome fait lorsqu'il veut envoyer un message ?",
-            "options": ["Il envoie un signal cosmique.", "Il écrit une lettre aux étoiles.", "Il utilise une plume céleste pour écrire ses pensées.", "Il envoie un rayon de lune avec son message."],
+            },
+            {
+            "question": "What does an astronomer do when they want to send a message?",
+            "options": ["They send a cosmic signal.", "They write a letter to the stars.", "They use a celestial feather to write their thoughts.", "They send a moonbeam with their message."],
             "answer": 0
-          },
-          {
-            "question": "Comment est-ce que les astronautes organisent une fête dans l'espace ?",
-            "options": ["Ils lancent des confettis cosmiques.", "Ils portent des costumes d'extraterrestres.", "Ils dansent avec les étoiles.", "Ils jouent de la musique interstellaire."],
+            },
+            {
+            "question": "How do astronauts throw a party in space?",
+            "options": ["They throw cosmic confetti.", "They wear alien costumes.", "They dance with the stars.", "They play interstellar music."],
             "answer": 2
-          }
-        ]
-      },
-      {
-        "category": "Astronomie populaire",
-        "questions": [
-          {
-            "question": "Quel film de science-fiction met en scène un astronaute bloqué sur Mars ?",
-            "options": ["Interstellar", "Gravity", "The Martian", "Apollo 13"],
-            "answer": 2
-          },
-          {
-            "question": "Quelle chanson célèbre de David Bowie fait référence à l'espace ?",
-            "options": ["Space Oddity", "Stairway to Heaven", "Bohemian Rhapsody", "Imagine"],
-            "answer": 0
-          },
-          {
-            "question": "Quel artiste a chanté la chanson 'Rocket Man' qui évoque un voyage dans l'espace ?",
-            "options": ["Elton John", "Michael Jackson", "Bob Dylan", "Prince"],
-            "answer": 0
-          },
-          {
-            "question": "Quel célèbre réalisateur a réalisé le film '2001: L'Odyssée de l'espace' ?",
-            "options": ["Stanley Kubrick", "Steven Spielberg", "Martin Scorsese", "Christopher Nolan"],
-            "answer": 0
-          },
-          {
-            "question": "Quelle série télévisée populaire met en scène des astronautes à bord d'une station spatiale internationale ?",
-            "options": ["The Big Bang Theory", "Stranger Things", "The Expanse", "The 100"],
-            "answer": 2
-          },
-          {
-            "question": "Quelle franchise de films met en scène des guerres galactiques entre les Jedi et les Sith ?",
-            "options": ["Star Trek", "Star Wars", "Guardians of the Galaxy", "The Matrix"],
-            "answer": 1
-          },
-          {
-            "question": "Quel célèbre groupe de musique a sorti l'album 'Dark Side of the Moon' inspiré par l'astronomie ?",
-            "options": ["The Beatles", "Pink Floyd", "Led Zeppelin", "Queen"],
-            "answer": 1
-          },
-          {
-            "question": "Quel roman de science-fiction de HG Wells raconte l'invasion de la Terre par des Martiens ?",
-            "options": ["1984", "The War of the Worlds", "Fahrenheit 451", "Brave New World"],
-            "answer": 1
-          },
-          {
-            "question": "Quel personnage de bande dessinée est un reporter intrépide voyageant à travers l'espace ?",
-            "options": ["Tintin", "Astérix", "Superman", "Spider-Man"],
-            "answer": 0
-          },
-          {
-            "question": "Quel célèbre festival de musique se déroule chaque année dans le désert de Black Rock, inspiré par les étoiles et l'espace ?",
-            "options": ["Burning Man", "Coachella", "Glastonbury", "Tomorrowland"],
-            "answer": 0
-          }
-        ]
-      },
-      {
-        "category": "Astrologie vs Astronomie",
-        "questions": [
-          {
-            "question": "L'astrologie est basée sur :",
-            "options": ["La science et l'observation des phénomènes célestes", "L'interprétation des positions des planètes et des étoiles", "L'étude des lois physiques et des mathématiques", "L'analyse des mouvements planétaires"],
-            "answer": 1
-          },
-          {
-            "question": "L'astronomie est basée sur :",
-            "options": ["Les croyances et les superstitions liées aux astres", "L'observation des phénomènes célestes et l'analyse scientifique", "Les horoscopes et les prédictions", "La recherche de l'influence des astres sur la personnalité"],
-            "answer": 1
-          },
-          {
-            "question": "L'astrologie est considérée comme :",
-            "options": ["Une science exacte", "Une pseudoscience", "Une religion", "Un art divinatoire"],
-            "answer": 1
-          },
-          {
-            "question": "L'astronomie est considérée comme :",
-            "options": ["Une pratique ésotérique", "Une science basée sur des faits observables", "Une méthode de prédiction de l'avenir", "Une croyance spirituelle"],
-            "answer": 1
-          },
-          {
-            "question": "L'astrologie est souvent associée à :",
-            "options": ["La recherche d'exoplanètes", "L'étude des étoiles et des galaxies", "La prédiction des événements futurs", "La mesure précise des distances cosmiques"],
-            "answer": 2
-          },
-          {
-            "question": "L'astronomie est souvent associée à :",
-            "options": ["La création de thèmes astraux", "L'observation des étoiles filantes", "La recherche de signes astrologiques", "L'étude des lois de la physique et de la cosmologie"],
-            "answer": 3
-          },
-          {
-            "question": "L'astrologie est basée sur l'idée que :",
-            "options": ["Les planètes et les étoiles influencent la personnalité et le destin", "Les mouvements planétaires sont uniquement des phénomènes gravitationnels", "Les horoscopes peuvent prédire l'avenir avec précision", "Les constellations sont des symboles spirituels"],
-            "answer": 0
-          },
-          {
-            "question": "L'astronomie est basée sur l'idée que :",
-            "options": ["Les signes astrologiques déterminent les traits de personnalité", "Les étoiles peuvent prédire les événements historiques", "Les mouvements planétaires ont une signification spirituelle", "Les lois de la physique s'appliquent à l'univers"],
-            "answer": 3
-          },
-          {
-            "question": "L'astrologie est souvent utilisée pour :",
-            "options": ["Prédire les éclipses solaires et lunaires", "Analyser les cycles climatiques", "Établir des calendriers précis", "Déterminer la compatibilité amoureuse et les traits de personnalité"],
-            "answer": 3
-          },
-          {
-            "question": "L'astronomie est souvent utilisée pour :",
-            "options": ["Créer des horoscopes personnalisés", "Étudier les impacts des astéroïdes sur la Terre", "Interpréter les rêves en relation avec les astres", "Développer des méthodes de divination"],
-            "answer": 1
-          }
-        ]
-      },
-      {
-        "category": "Dates astronomiques",
-        "questions": [
-          {
-            "question": "En quelle année l'Homme a-t-il marché pour la première fois sur la Lune ?",
-            "options": ["1965", "1969", "1972", "1981"],
-            "answer": 1
-          },
-          {
-            "question": "Quand a été lancé le télescope spatial Hubble ?",
-            "options": ["1990", "1995", "2000", "2005"],
-            "answer": 0
-          },
-          {
-            "question": "En quelle année la sonde Voyager 1 a-t-elle survolé Jupiter et ses lunes ?",
-            "options": ["1973", "1976", "1979", "1982"],
-            "answer": 2
-          },
-          {
-            "question": "En quelle année la comète de Halley a-t-elle été visible depuis la Terre pour la dernière fois ?",
-            "options": ["1980", "1986", "1991", "1997"],
-            "answer": 1
-          },
-          {
-            "question": "Quand a eu lieu la célèbre mission Apollo 11 avec le premier atterrissage lunaire ?",
-            "options": ["1965", "1969", "1972", "1975"],
-            "answer": 1
-          },
-          {
-            "question": "En quelle année la mission Cassini-Huygens a-t-elle atteint Saturne ?",
-            "options": ["1997", "2001", "2005", "2010"],
-            "answer": 2
-          },
-          {
-            "question": "Quand a été lancé le premier satellite artificiel, Spoutnik 1 ?",
-            "options": ["1952", "1957", "1961", "1965"],
-            "answer": 1
-          },
-          {
-            "question": "En quelle année la mission Mars Rover Curiosity a-t-elle atterri sur Mars ?",
-            "options": ["2004", "2008", "2012", "2016"],
-            "answer": 2
-          },
-          {
-            "question": "Quand a été lancé le télescope spatial Kepler dédié à la recherche d'exoplanètes ?",
-            "options": ["2005", "2009", "2013", "2017"],
-            "answer": 1
-          },
-          {
-            "question": "En quelle année la mission New Horizons a-t-elle survolé Pluton ?",
-            "options": ["2006", "2009", "2012", "2015"],
-            "answer": 3
-          }
-        ]
-      },
-      {
-        "category": "Astronome et astronaute célèbre",
-        "questions": [
-          {
-            "question": "Qui a découvert les lois du mouvement planétaire connues sous le nom de lois de Kepler ?",
-            "options": ["Galilée Galiléi", "Johannes Kepler", "Isaac Newton", "Nicolas Copernic"],
-            "answer": 1
-          },
-          {
-            "question": "Quel astronome a proposé la théorie de l'expansion de l'univers, connue sous le nom de loi de Hubble ?",
-            "options": ["Edwin Hubble", "Albert Einstein", "Stephen Hawking", "Carl Sagan"],
-            "answer": 0
-          },
-          {
-            "question": "Qui a été le premier homme à effectuer un vol spatial et à orbiter autour de la Terre ?",
-            "options": ["Neil Armstrong", "Yuri Gagarin", "Buzz Aldrin", "John Glenn"],
-            "answer": 1
-          },
-          {
-            "question": "Quel astronaute a été le premier à marcher sur la Lune lors de la mission Apollo 11 ?",
-            "options": ["Buzz Aldrin", "Michael Collins", "Alan Shepard", "Neil Armstrong"],
-            "answer": 3
-          },
-          {
-            "question": "Quel astronome a développé la théorie de la relativité générale, une nouvelle conception de la gravité ?",
-            "options": ["Johannes Kepler", "Nicolas Copernic", "Isaac Newton", "Albert Einstein"],
-            "answer": 3
-          },
-          {
-            "question": "Qui est la première femme astronaute à être allée dans l'espace ?",
-            "options": ["Valentina Tereshkova", "Sally Ride", "Mae Jemison", "Eileen Collins"],
-            "answer": 0
-          },
-          {
-            "question": "Quel astronome a découvert la première exoplanète en orbite autour d'une étoile semblable au Soleil ?",
-            "options": ["Jill Tarter", "Alan Stern", "Alexei Leonov", "Michel Mayor"],
-            "answer": 3
-          },
-          {
-            "question": "Quel astronaute américain a passé le plus de temps dans l'espace lors de missions spatiales ?",
-            "options": ["Scott Kelly", "Peggy Whitson", "Michael Lopez-Alegria", "Jerry Ross"],
-            "answer": 1
-          },
-          {
-            "question": "Quel astronome a formulé la célèbre équation de Drake pour estimer le nombre de civilisations extraterrestres dans la Voie lactée ?",
-            "options": ["Frank Drake", "Carl Sagan", "Jill Tarter", "Neil deGrasse Tyson"],
-            "answer": 0
-          },
-          {
-            "question": "Quel astronaute a été le premier à réaliser une sortie extravéhiculaire dans l'espace ?",
-            "options": ["Alan Shepard", "Ed White", "Alexei Leonov", "Bruce McCandless II"],
-            "answer": 2
-          }
-        ]
-      },
-      {
-        "category": "Reconnaissance d'image astronomique",
-        "questions": [
-          {
-            "question": "Quel est cet objet céleste ?",
-            "image": "assets/images/quizz/galaxieSpirale.jpg",
-            "options": ["Galaxie spirale", "Nébuleuse", "Amas d'étoiles", "Planète"],
-            "answer": 0
-          },
-          {
-            "question": "Quelle est cette constellation ?",
-            "image": "assets/images/quizz/andromede_constellation.png",
-            "options": ["Orion", "Andromède", "Pégase", "Ursa Major"],
-            "answer": 1
-          },
-          {
-            "question": "Quelle est cette planète du système solaire ?",
-            "image": "assets/images/quizz/saturne.jpeg",
-            "options": ["Jupiter", "Vénus", "Saturne", "Mars"],
-            "answer": 2
-          },
-          {
-            "question": "Quel est cet événement astronomique ?",
-            "image": "assets/images/quizz/Comet_Halley.jpg",
-            "options": ["Éclipse solaire", "Aurore boréale", "Pluie d'étoiles filantes", "Passage d'un comète"],
-            "answer": 3
-          },
-          {
-            "question": "Quel est cet objet céleste ?",
-            "image": "assets/images/quizz/quasar.jpeg",
-            "options": ["Supernova", "Quasar", "Pulsar", "Étoile binaire"],
-            "answer": 1
-          },
-          {
-            "question": "Quelle est cette nébuleuse célèbre ?",
-            "image": "assets/images/nebuleuse_galaxie/nebuleuse_de_laigle.jpeg",
-            "options": ["Nébuleuse d'Orion", "Nébuleuse du Crabe", "Nébuleuse de l'Aigle", "Nébuleuse d'Hélix"],
-            "answer": 2
-          },
-          {
-            "question": "Quel est cet objet céleste ?",
-            "image": "assets/images/nebuleuse_galaxie/nebuleuse_du_papillon.jpg",
-            "options": ["Galaxie elliptique", "Amas de galaxies", "Nébuleuse papillon", "Trous noirs supermassifs"],
-            "answer": 2
-          },
-          {
-            "question": "Quelle est cette planète naine du système solaire ?",
-            "image": "assets/images/planete_comete/pluton.jpeg",
-            "options": ["Pluton", "Mercure", "Cérès", "Éris"],
-            "answer": 0
-          },
-          {
-            "question": "Quelle est cette étoile célèbre ?",
-            "image": "assets/images/quizz/betelgeuse.jpeg",
-            "options": ["Sirius", "Betelgeuse", "Alpha Centauri", "Véga"],
-            "answer": 1
-          },
-          {
-            "question": "Quel est cet objet céleste ?",
-            "image": "assets/images/quizz/amas_globulaire.jpg",
-            "options": ["Nébuleuse sombre", "Quasar", "Nébuleuse planétaire", "Amas globulaire"],
-            "answer": 3
-          }
-        ]
-      }
-      
-      
-      
-      
-      
-      
-      
+            }
+            ]
+            },
+            {
+              "category": "Popular Astronomy",
+              "questions": [
+              {
+              "question": "Which science fiction film features an astronaut stranded on Mars?",
+              "options": ["Interstellar", "Gravity", "The Martian", "Apollo 13"],
+              "answer": 2
+              },
+              {
+              "question": "Which famous song by David Bowie references space?",
+              "options": ["Space Oddity", "Stairway to Heaven", "Bohemian Rhapsody", "Imagine"],
+              "answer": 0
+              },
+              {
+              "question": "Which artist sang the song 'Rocket Man,' which portrays a journey into space?",
+              "options": ["Elton John", "Michael Jackson", "Bob Dylan", "Prince"],
+              "answer": 0
+              },
+              {
+              "question": "Which renowned director directed the film '2001: A Space Odyssey'?",
+              "options": ["Stanley Kubrick", "Steven Spielberg", "Martin Scorsese", "Christopher Nolan"],
+              "answer": 0
+              },
+              {
+              "question": "Which popular TV series features astronauts aboard an international space station?",
+              "options": ["The Big Bang Theory", "Stranger Things", "The Expanse", "The 100"],
+              "answer": 2
+              },
+              {
+              "question": "Which film franchise depicts galactic wars between the Jedi and the Sith?",
+              "options": ["Star Trek", "Star Wars", "Guardians of the Galaxy", "The Matrix"],
+              "answer": 1
+              },
+              {
+              "question": "Which famous music band released the album 'Dark Side of the Moon,' inspired by astronomy?",
+              "options": ["The Beatles", "Pink Floyd", "Led Zeppelin", "Queen"],
+              "answer": 1
+              },
+              {
+              "question": "Which science fiction novel by H.G. Wells narrates the invasion of Earth by Martians?",
+              "options": ["1984", "The War of the Worlds", "Fahrenheit 451", "Brave New World"],
+              "answer": 1
+              },
+              {
+              "question": "Which comic book character is a fearless reporter traveling through space?",
+              "options": ["Tintin", "Astérix", "Superman", "Spider-Man"],
+              "answer": 0
+              },
+              {
+              "question": "Which famous music festival takes place annually in the Black Rock Desert, inspired by stars and space?",
+              "options": ["Burning Man", "Coachella", "Glastonbury", "Tomorrowland"],
+              "answer": 0
+              }
+              ]
+              },
+              {
+                "category": "Astrology vs Astronomy",
+                "questions": [
+                {
+                "question": "Astrology is based on:",
+                "options": ["Science and observation of celestial phenomena", "Interpretation of the positions of planets and stars", "Study of physical laws and mathematics", "Analysis of planetary movements"],
+                "answer": 1
+                },
+                {
+                "question": "Astronomy is based on:",
+                "options": ["Beliefs and superstitions related to celestial bodies", "Observation of celestial phenomena and scientific analysis", "Horoscopes and predictions", "Search for the influence of celestial bodies on personality"],
+                "answer": 1
+                },
+                {
+                "question": "Astrology is considered as:",
+                "options": ["An exact science", "A pseudoscience", "A religion", "A divinatory art"],
+                "answer": 1
+                },
+                {
+                "question": "Astronomy is considered as:",
+                "options": ["An esoteric practice", "A science based on observable facts", "A method of predicting the future", "A spiritual belief"],
+                "answer": 1
+                },
+                {
+                "question": "Astrology is often associated with:",
+                "options": ["The search for exoplanets", "The study of stars and galaxies", "The prediction of future events", "The precise measurement of cosmic distances"],
+                "answer": 2
+                },
+                {
+                "question": "Astronomy is often associated with:",
+                "options": ["Creating birth charts", "Observing shooting stars", "Searching for astrological signs", "Studying the laws of physics and cosmology"],
+                "answer": 3
+                },
+                {
+                "question": "Astrology is based on the idea that:",
+                "options": ["Planets and stars influence personality and destiny", "Planetary movements are solely gravitational phenomena", "Horoscopes can accurately predict the future", "Constellations are spiritual symbols"],
+                "answer": 0
+                },
+                {
+                "question": "Astronomy is based on the idea that:",
+                "options": ["Astrological signs determine personality traits", "Stars can predict historical events", "Planetary movements have spiritual significance", "The laws of physics apply to the universe"],
+                "answer": 3
+                },
+                {
+                "question": "Astrology is often used to:",
+                "options": ["Predict solar and lunar eclipses", "Analyze climate cycles", "Establish precise calendars", "Determine compatibility and personality traits"],
+                "answer": 3
+                },
+                {
+                "question": "Astronomy is often used to:",
+                "options": ["Create personalized horoscopes", "Study the impacts of asteroids on Earth", "Interpret dreams related to celestial bodies", "Develop divination methods"],
+                "answer": 1
+                }
+                ]
+                },
+                {
+                  "category": "Astronomical Dates",
+                  "questions": [
+                  {
+                  "question": "In which year did humans first walk on the Moon?",
+                  "options": ["1965", "1969", "1972", "1981"],
+                  "answer": 1
+                  },
+                  {
+                  "question": "When was the Hubble Space Telescope launched?",
+                  "options": ["1990", "1995", "2000", "2005"],
+                  "answer": 0
+                  },
+                  {
+                  "question": "In which year did the Voyager 1 probe fly by Jupiter and its moons?",
+                  "options": ["1973", "1976", "1979", "1982"],
+                  "answer": 2
+                  },
+                  {
+                  "question": "In which year was Halley's Comet last visible from Earth?",
+                  "options": ["1980", "1986", "1991", "1997"],
+                  "answer": 1
+                  },
+                  {
+                  "question": "When did the famous Apollo 11 mission with the first Moon landing take place?",
+                  "options": ["1965", "1969", "1972", "1975"],
+                  "answer": 1
+                  },
+                  {
+                  "question": "In which year did the Cassini-Huygens mission reach Saturn?",
+                  "options": ["1997", "2001", "2005", "2010"],
+                  "answer": 2
+                  },
+                  {
+                  "question": "When was the first artificial satellite, Sputnik 1, launched?",
+                  "options": ["1952", "1957", "1961", "1965"],
+                  "answer": 1
+                  },
+                  {
+                  "question": "In which year did the Mars Rover Curiosity land on Mars?",
+                  "options": ["2004", "2008", "2012", "2016"],
+                  "answer": 2
+                  },
+                  {
+                  "question": "When was the Kepler Space Telescope launched for the purpose of exoplanet research?",
+                  "options": ["2005", "2009", "2013", "2017"],
+                  "answer": 1
+                  },
+                  {
+                  "question": "In which year did the New Horizons mission fly by Pluto?",
+                  "options": ["2006", "2009", "2012", "2015"],
+                  "answer": 3
+                  }
+                  ]
+                  },
+                  {
+                    "category": "Famous Astronomers and Astronauts",
+                    "questions": [
+                    {
+                    "question": "Who discovered the laws of planetary motion known as Kepler's laws?",
+                    "options": ["Galileo Galilei", "Johannes Kepler", "Isaac Newton", "Nicolas Copernicus"],
+                    "answer": 1
+                    },
+                    {
+                    "question": "Which astronomer proposed the theory of the expanding universe, known as Hubble's law?",
+                    "options": ["Edwin Hubble", "Albert Einstein", "Stephen Hawking", "Carl Sagan"],
+                    "answer": 0
+                    },
+                    {
+                    "question": "Who was the first man to travel to space and orbit the Earth?",
+                    "options": ["Neil Armstrong", "Yuri Gagarin", "Buzz Aldrin", "John Glenn"],
+                    "answer": 1
+                    },
+                    {
+                    "question": "Which astronaut was the first to walk on the Moon during the Apollo 11 mission?",
+                    "options": ["Buzz Aldrin", "Michael Collins", "Alan Shepard", "Neil Armstrong"],
+                    "answer": 3
+                    },
+                    {
+                    "question": "Which astronomer developed the theory of general relativity, a new conception of gravity?",
+                    "options": ["Johannes Kepler", "Nicolas Copernicus", "Isaac Newton", "Albert Einstein"],
+                    "answer": 3
+                    },
+                    {
+                    "question": "Who was the first female astronaut to go to space?",
+                    "options": ["Valentina Tereshkova", "Sally Ride", "Mae Jemison", "Eileen Collins"],
+                    "answer": 0
+                    },
+                    {
+                    "question": "Which astronomer discovered the first exoplanet orbiting a Sun-like star?",
+                    "options": ["Jill Tarter", "Alan Stern", "Alexei Leonov", "Michel Mayor"],
+                    "answer": 3
+                    },
+                    {
+                    "question": "Which American astronaut has spent the most time in space during space missions?",
+                    "options": ["Scott Kelly", "Peggy Whitson", "Michael Lopez-Alegria", "Jerry Ross"],
+                    "answer": 1
+                    },
+                    {
+                    "question": "Which astronomer formulated the famous Drake equation to estimate the number of extraterrestrial civilizations in the Milky Way?",
+                    "options": ["Frank Drake", "Carl Sagan", "Jill Tarter", "Neil deGrasse Tyson"],
+                    "answer": 0
+                    },
+                    {
+                    "question": "Which astronaut was the first to perform an extravehicular activity (EVA) in space?",
+                    "options": ["Alan Shepard", "Ed White", "Alexei Leonov", "Bruce McCandless II"],
+                    "answer": 2
+                    }
+                    ]
+                    },
+                    {
+                      "category": "Astronomical Image Recognition",
+                      "questions": [
+                      {
+                      "question": "What is this celestial object?",
+                      "image": "assets/images/quizz/galaxieSpirale.jpg",
+                      "options": ["Spiral Galaxy", "Nebula", "Star Cluster", "Planet"],
+                      "answer": 0
+                      },
+                      {
+                      "question": "What is this constellation?",
+                      "image": "assets/images/quizz/andromede_constellation.png",
+                      "options": ["Orion", "Andromeda", "Pegasus", "Ursa Major"],
+                      "answer": 1
+                      },
+                      {
+                      "question": "What is this planet in the solar system?",
+                      "image": "assets/images/quizz/saturne.jpeg",
+                      "options": ["Jupiter", "Venus", "Saturn", "Mars"],
+                      "answer": 2
+                      },
+                      {
+                      "question": "What is this astronomical event?",
+                      "image": "assets/images/quizz/Comet_Halley.jpg",
+                      "options": ["Solar Eclipse", "Northern Lights", "Meteor Shower", "Passing Comet"],
+                      "answer": 3
+                      },
+                      {
+                      "question": "What is this celestial object?",
+                      "image": "assets/images/quizz/quasar.jpeg",
+                      "options": ["Supernova", "Quasar", "Pulsar", "Binary Star"],
+                      "answer": 1
+                      },
+                      {
+                      "question": "What is this famous nebula?",
+                      "image": "assets/images/nebuleuse_galaxie/nebuleuse_de_laigle.jpeg",
+                      "options": ["Orion Nebula", "Crab Nebula", "Eagle Nebula", "Helix Nebula"],
+                      "answer": 2
+                      },
+                      {
+                      "question": "What is this celestial object?",
+                      "image": "assets/images/nebuleuse_galaxie/nebuleuse_du_papillon.jpg",
+                      "options": ["Elliptical Galaxy", "Galaxy Cluster", "Butterfly Nebula", "Supermassive Black Holes"],
+                      "answer": 2
+                      },
+                      {
+                      "question": "What is this dwarf planet in the solar system?",
+                      "image": "assets/images/planete_comete/pluton.jpeg",
+                      "options": ["Pluto", "Mercury", "Ceres", "Eris"],
+                      "answer": 0
+                      },
+                      {
+                      "question": "What is this famous star?",
+                      "image": "assets/images/quizz/betelgeuse.jpeg",
+                      "options": ["Sirius", "Betelgeuse", "Alpha Centauri", "Vega"],
+                      "answer": 1
+                      },
+                      {
+                      "question": "What is this celestial object?",
+                      "image": "assets/images/quizz/amas_globulaire.jpg",
+                      "options": ["Dark Nebula", "Quasar", "Planetary Nebula", "Globular Cluster"],
+                      "answer": 3
+                      }
+                      ]
+                      }
+                      
     ]
   }
   

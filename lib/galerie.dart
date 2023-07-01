@@ -1,13 +1,51 @@
+import 'package:astronomy_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' show get;
 import 'dart:io';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
-String page_gallery='',url='';
+
+
+String page_gallery='',url='',selectedCategory='',img='';
+
+class GalleryPage {
+  final String page;
+  final List<Picture> images;
+
+  GalleryPage({required this.page, required this.images});
+
+  factory GalleryPage.fromJson(Map<String, dynamic> json) {
+    final String page = json['page'];
+    final List<dynamic> imagesData = json['images'];
+    final List<Picture> pictures = imagesData.map((imageData) => Picture.fromJson(imageData)).toList();
+    return GalleryPage(page: page, images: pictures);
+  }
+}
+
+class Picture {
+  final String path;
+  final String description;
+
+  Picture({required this.path, required this.description});
+
+  factory Picture.fromJson(Map<String, dynamic> json) {
+    final String path = json['path'];
+    final String description = json['description'];
+    return Picture(path: path, description: description);
+  }
+}
+
+class ImageData {
+  final String imageUrl;
+  final String description;
+
+  ImageData({required this.imageUrl, required this.description});
+}
 
 class ApiService{
 
@@ -50,7 +88,7 @@ class ApiService{
     }
   }
 
-  static   Future<String> fetchFirstImage(String keyword) async {
+  static Future<String> fetchFirstImage(String keyword) async {
   final response = await http.get(Uri.parse("https://images-api.nasa.gov/search?q=${keyword}&media_type=image"));
   // Include the 'media_type=image' parameter in the API URL
 
@@ -72,47 +110,11 @@ class ApiService{
         }
       }
     }
-
-    print(imageUrl);
     return imageUrl;
   } else {
     throw Exception('Failed to fetch images');
   }
 }
-}
-
-class GalleryPage {
-  final String page;
-  final List<Picture> images;
-
-  GalleryPage({required this.page, required this.images});
-
-  factory GalleryPage.fromJson(Map<String, dynamic> json) {
-    final String page = json['page'];
-    final List<dynamic> imagesData = json['images'];
-    final List<Picture> pictures = imagesData.map((imageData) => Picture.fromJson(imageData)).toList();
-    return GalleryPage(page: page, images: pictures);
-  }
-}
-
-class Picture {
-  final String path;
-  final String description;
-
-  Picture({required this.path, required this.description});
-
-  factory Picture.fromJson(Map<String, dynamic> json) {
-    final String path = json['path'];
-    final String description = json['description'];
-    return Picture(path: path, description: description);
-  }
-}
-
-class ImageData {
-  final String imageUrl;
-  final String description;
-
-  ImageData({required this.imageUrl, required this.description});
 }
 
 class NasaApiScreen extends StatefulWidget {
@@ -126,16 +128,24 @@ class _NasaApiScreenState extends State<NasaApiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(page_gallery),
-      ),
+      appBar: AppbarWidget(icon: Icons.photo_library, text: 'Photo library'),
       body: FutureBuilder<List<ImageData>>(
-        future: ApiService.fetchImages(url),
+        future: ApiService.fetchImages(selectedCategory),
         builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+           if (snapshot.connectionState == ConnectionState.waiting) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
           } else if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
+            return Center(
+              child: Text(
+                'Verify your internet connection',
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.indigo,
+                ),
+              ),
+            );
           } else {
             final images = snapshot.data;
 
@@ -161,8 +171,8 @@ class _NasaApiScreenState extends State<NasaApiScreen> {
                   },
                   child: Card(
                     elevation: 2.0,
-                    child: Image.network(
-                      image.imageUrl,
+                    child: CachedNetworkImage(
+                      imageUrl:image.imageUrl,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -192,7 +202,7 @@ class GalerieState extends State<Galerie> {
     loadItems();
   }
 
-  void loadItems() async {
+ Future<void> loadItems() async {
     // Charger le fichier JSON
     String jsonContent = await DefaultAssetBundle.of(context).loadString('assets/galerie.json');
     List<dynamic> jsonList = json.decode(jsonContent);
@@ -208,9 +218,7 @@ class GalerieState extends State<Galerie> {
 @override
 Widget build(BuildContext context) {
   return Scaffold(
-    appBar: AppBar(
-      // ... le reste de votre code d'appBar
-    ),
+    appBar: AppbarWidget(icon: Icons.photo_library, text: 'Photo library'),
     body: GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2, // Nombre de colonnes dans la grille
@@ -221,7 +229,7 @@ Widget build(BuildContext context) {
       itemBuilder: (context, index) {
         final item = items[index];
         url = item['url'];
-        print(url);
+        img=item['image'];
         return InkWell(
           onTap: () {
             Navigator.push(
@@ -229,38 +237,20 @@ Widget build(BuildContext context) {
               MaterialPageRoute(builder: (context) => NasaApiScreen()),
             );
             page_gallery = item['title'];
+            selectedCategory=item['url'];
           },
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.0),
-              boxShadow: [
-                BoxShadow(
-                  spreadRadius: 2,
-                  blurRadius: 5,
-                  offset: Offset(0, 3),
-                ),
-              ],
+              
             ),
             child: Column(
               children: [
                 Expanded(
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
-                    child: FutureBuilder<String>(
-                      future: ApiService.fetchFirstImage(url),
-                      builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
-                        if (snapshot.connectionState == ConnectionState.waiting) {
-                          // Afficher une image de chargement pendant le chargement de l'URL
-                          return CircularProgressIndicator();
-                        } else {
-                          // Afficher l'image une fois que l'URL est disponible
-                          return Image.network(
-                            snapshot.data!,
-                            fit: BoxFit.cover, // Appliquer le mode de redimensionnement de l'image
-                          );
-                        }
-                      },
-                    ),
+                    child: Image.asset(item['image'],
+                      fit: BoxFit.cover,)
                   ),
                 ),
                 Padding(
@@ -302,31 +292,58 @@ class FullScreenImage extends StatefulWidget {
   _FullScreenImageState createState() => _FullScreenImageState();
 }
 
-class _FullScreenImageState extends State<FullScreenImage> {
+class _FullScreenImageState extends State<FullScreenImage> with SingleTickerProviderStateMixin {
   late PageController _pageController;
   int _currentIndex = 0;
 
- String imageData='';
+  String imageData = '';
   bool dataLoaded = false;
+  bool downloading = false;
+  late AnimationController _animationController;
+  late Animation<double> _animation;
 
-Future<void> downloadImage(String imageUrl) async {
+  @override
+  void initState() {
+    super.initState();
+    _currentIndex = widget.initialIndex;
+    _pageController = PageController(initialPage: _currentIndex);
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 500),
+    );
+    _animation = Tween<double>(begin: 0, end: 1).animate(_animationController);
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  Future<void> downloadImage(String imageUrl) async {
+  setState(() {
+    downloading = true;
+  });
+
   try {
     final response = await http.get(Uri.parse(imageUrl));
     if (response.statusCode == 200) {
       final documentDirectory = await getApplicationDocumentsDirectory();
-      print(documentDirectory);
       final firstPath = documentDirectory.path + "/images";
       final filePathAndName = documentDirectory.path + '/images/pic.jpg';
-      
+
       await Directory(firstPath).create(recursive: true);
       final file = File(filePathAndName);
       await file.writeAsBytes(response.bodyBytes);
+
+      await ImageGallerySaver.saveFile(filePathAndName); // Enregistrement de l'image dans la galerie
 
       setState(() {
         imageData = filePathAndName;
         dataLoaded = true;
       });
-      
+
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Image downloaded')),
       );
@@ -337,27 +354,30 @@ Future<void> downloadImage(String imageUrl) async {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text('Failed to download image')),
     );
+  } finally {
+    setState(() {
+      downloading = false;
+    });
   }
 }
 
-  @override
-  void initState() {
-    super.initState();
-    _currentIndex = widget.initialIndex;
-    _pageController = PageController(initialPage: _currentIndex);
-  }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
+  void _startAnimation() {
+    _animationController.reset();
+    _animationController.forward();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Phototeque'),
+        title: Text('', 
+        style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),),
+
+       backgroundColor: Colors.indigo,
       ),
       body: GestureDetector(
         onTap: () {
@@ -407,15 +427,46 @@ Future<void> downloadImage(String imageUrl) async {
                       ],
                     ),
                     Positioned(
-                      bottom: 16.0,
+                      bottom: 160.0,
                       right: 16.0,
-                      child: FloatingActionButton(
-                        onPressed: () {
+                      child: GestureDetector(
+                        onTap: () {
                           final imageUrl = widget.imageUrls[index];
                           downloadImage(imageUrl);
+                          _startAnimation();
                         },
-
-                        child: Icon(Icons.download),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.indigo,
+                            borderRadius: BorderRadius.circular(16.0),
+                          ),
+                          padding: EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              if (downloading)
+                                RotationTransition(
+                                  turns: _animation,
+                                  child: Icon(
+                                    Icons.refresh,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              if (!downloading)
+                                Icon(
+                                  Icons.download,
+                                  color: Colors.white,
+                                ),
+                              SizedBox(width: 8.0),
+                              Text(
+                                downloading ? 'Downloading...' : 'Download',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                   ],
@@ -428,3 +479,4 @@ Future<void> downloadImage(String imageUrl) async {
     );
   }
 }
+

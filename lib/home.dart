@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ScreenDirection {
-  final String routeName;
+  final String route;
 
-  ScreenDirection(this.routeName);
+  ScreenDirection(this.route);
 }
-
 
 class Accueil extends StatelessWidget {
 
 final List<Map<String, dynamic>> _introData = [
   {
-    'title': 'Cours',
+    'title': 'Courses',
     'image': 'assets/images/Intro_screen/cours.webp',
     'direction': ScreenDirection('/cours'), // Direction vers l'écran de cours
   },
@@ -21,34 +20,28 @@ final List<Map<String, dynamic>> _introData = [
     'direction': ScreenDirection('/quizz'), // Direction vers l'écran de quizz
   },
   {
-    'title': 'Photothèque',
+    'title': 'Photo Library',
     'image': 'assets/images/Intro_screen/galerie.webp',
     'direction': ScreenDirection('/phototheque'), // Direction vers l'écran de photothèque
   },
   {
-    'title': 'Forum',
-    'image': 'assets/images/Intro_screen/forum.webp',
-    'direction': ScreenDirection('/forum'), // Direction vers l'écran de forum
-  },
-  {
-    'title': 'Lexique',
+    'title': 'Glossary',
     'image': 'assets/images/Intro_screen/lexique.webp',
     'direction': ScreenDirection('/lexique'), // Direction vers l'écran de lexique
   },
   {
-    'title': 'Actualités',
+    'title': 'News',
     'image': 'assets/images/Intro_screen/actualites.png',
     'direction': ScreenDirection('/actualites'), // Direction vers l'écran d'actualités
   },
 ];
 
-
-  @override
+@override
 Widget build(BuildContext context) {
   return Scaffold(
     body: GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
+        crossAxisCount: 1,
         childAspectRatio: 1.0,
       ),
       itemCount: _introData.length,
@@ -64,7 +57,7 @@ Widget build(BuildContext context) {
               Navigator.pushNamed(context, _introData[index]['direction'].route);
             },
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Expanded(
                   child: ClipRRect(
@@ -79,18 +72,13 @@ Widget build(BuildContext context) {
                 ),
                 Padding(
                   padding: EdgeInsets.all(8.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        _introData[index]['title']!,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+                  child: Text(
+                    _introData[index]['title']!,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ],

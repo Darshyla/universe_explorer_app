@@ -3,12 +3,12 @@ import 'dart:math';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 import 'package:video_thumbnail/video_thumbnail.dart';
-import 'package:flutter_downloader/flutter_downloader.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:sqflite/sqflite.dart';
+import 'package:path/path.dart';
+
 
 class APOD {
   final String date;
@@ -44,94 +44,149 @@ class APODService {
   }
 }
 
+class DatabaseHelper {
+  static Database? _database;
+
+  static Future<Database> get database async {
+    if (_database != null) {
+      return _database!;
+    }
+
+    _database = await _initDatabase();
+    return _database!;
+  }
+
+  static Future<Database> _initDatabase() async {
+    String databasesPath = await getDatabasesPath();
+    String dbPath = join(databasesPath, 'word_of_the_day.db');
+
+    return await openDatabase(
+      dbPath,
+      version: 1,
+      onCreate: (db, version) async {
+        await db.execute('''
+          CREATE TABLE word_of_the_day (
+            id INTEGER PRIMARY KEY,
+            word TEXT,
+            definition TEXT,
+            example TEXT
+          )
+        ''');
+      },
+    );
+  }
+
+  static Future<void> insertWordOfTheDay(Map<String, dynamic> wordData) async {
+    final db = await database;
+    await db.insert('word_of_the_day', wordData);
+  }
+
+  static Future<Map<String, dynamic>?> getWordOfTheDay() async {
+    final db = await database;
+    final List<Map<String, dynamic>> result = await db.query('word_of_the_day', orderBy: 'id DESC', limit: 1);
+    return result.isNotEmpty ? result.first : null;
+  }
+
+  static Future<void> deleteWordOfTheDay() async {
+    final db = await database;
+    await db.delete('word_of_the_day');
+  }
+}
+
 class TodayPage extends StatefulWidget {
   @override
   TodayState createState() => TodayState();
 }
 
 class TodayState extends State<TodayPage> {
-  late Future<APOD> apodFuture;
-  late Timer? _timer;
-  late DateTime _nextMidday;
-  late Future<Map<String, dynamic>> _randomTermFuture;
-  final _storage = FlutterSecureStorage();
-  bool isImageExpanded = false;
+ late Future<APOD> apodFuture;
+late Timer? _timer;
+late DateTime _nextMidday;
+Future<Map<String, dynamic>>? _randomTermFuture;
+bool isImageExpanded = false;
 
-  @override
-  void initState() {
-    super.initState();
-    apodFuture = APODService.fetchAPODData();
-    _calculateNextMidday();
-    _loadStoredTerm();
-    _startTimer();
+@override
+void initState() {
+  super.initState();
+  apodFuture = APODService.fetchAPODData();
+  _calculateNextMidday();
+  _loadStoredTerm();
+  _startTimer();
+}
+
+@override
+void dispose() {
+  _stopTimer();
+  super.dispose();
+}
+
+void _calculateNextMidday() {
+  DateTime now = DateTime.now();
+  _nextMidday = DateTime(now.year, now.month, now.day, 10, 51);
+  if (now.isAfter(_nextMidday)) {
+    _nextMidday = _nextMidday.add(Duration(days: 1));
   }
+}
 
-  @override
-  void dispose() {
-    _stopTimer();
-    super.dispose();
-  }
-
-  void _calculateNextMidday() {
-    DateTime now = DateTime.now();
-    _nextMidday = DateTime(now.year, now.month, now.day, 12, 0);
-    if (now.isAfter(_nextMidday)) {
-      _nextMidday = _nextMidday.add(Duration(days: 1));
-    }
-  }
-
-  void _loadStoredTerm() async {
-    String? storedTerm = await _storage.read(key: 'term_of_the_day');
-    if (storedTerm != null) {
-      setState(() {
-        _randomTermFuture = Future.value(jsonDecode(storedTerm));
-      });
-    }
-    print(storedTerm);
-  }
-
-  void _startTimer() async {
-    _randomTermFuture = getRandomTerm();
+void _loadStoredTerm() async {
+  Map<String, dynamic>? storedTerm = await DatabaseHelper.getWordOfTheDay();
+  if (storedTerm != null) {
+    setState(() {
+      _randomTermFuture = Future.value(storedTerm);
+    });
+  } else {
     DateTime now = DateTime.now();
     if (now.isBefore(_nextMidday)) {
-      String? storedTerm = await _storage.read(key: 'term_of_the_day');
-      if (storedTerm != null) {
-        setState(() {
-          _randomTermFuture = Future.value(jsonDecode(storedTerm));
-          print('yes');
-        });
-      }
-    }
-
-    Duration durationUntilMidday = _nextMidday.difference(now);
-    _timer = Timer(durationUntilMidday, () async {
+      storedTerm = await getRandomTerm();
       setState(() {
-        _randomTermFuture = getRandomTerm();
-        _calculateNextMidday();
-        _startTimer();
+        _randomTermFuture = Future.value(storedTerm);
       });
+    }
+  }
+  print(storedTerm);
+}
 
-      Map<String, dynamic> newTerm = await _randomTermFuture;
-      print(newTerm);
-      String newTermJson = jsonEncode(newTerm);
-      await _storage.write(key: 'term_of_the_day', value: newTermJson);
-      print(newTermJson);
+void _startTimer() async {
+  DateTime now = DateTime.now();
+  if (now.isBefore(_nextMidday)) {
+    Map<String, dynamic>? storedTerm = await DatabaseHelper.getWordOfTheDay();
+    if (storedTerm != null) {
+      setState(() {
+        _randomTermFuture = Future.value(storedTerm);
+        print(_randomTermFuture);
+      });
+    }
+  }
+
+  Duration durationUntilMidday = _nextMidday.difference(now);
+  _timer = Timer(durationUntilMidday, () async {
+    setState(() {
+      _randomTermFuture = getRandomTerm();
+      _calculateNextMidday();
+      _startTimer();
     });
-  }
 
-  void _stopTimer() {
-    _timer?.cancel();
-  }
+    Map<String, dynamic> newTerm = await _randomTermFuture!;
+    print(newTerm);
+    await DatabaseHelper.deleteWordOfTheDay();
+    await DatabaseHelper.insertWordOfTheDay(newTerm);
+  });
+}
 
-  Future<Map<String, dynamic>> getRandomTerm() async {
-    String jsonString = await rootBundle.loadString('assets/lexique.json');
-    var jsonData = jsonDecode(jsonString);
-    List<dynamic> terms = jsonData['terms'];
+void _stopTimer() {
+  _timer?.cancel();
+}
 
-    int randomIndex = Random().nextInt(terms.length);
+Future<Map<String, dynamic>> getRandomTerm() async {
+  String jsonString = await rootBundle.loadString('assets/lexique.json');
+  var jsonData = jsonDecode(jsonString);
+  List<dynamic> terms = jsonData['terms'];
 
-    return terms[randomIndex];
-  }
+  int randomIndex = Random().nextInt(terms.length);
+  return terms[randomIndex];
+}
+
+
 
   Future<Uint8List> getThumbnail(String url) async {
     final thumbnail = await VideoThumbnail.thumbnailData(
@@ -144,16 +199,13 @@ class TodayState extends State<TodayPage> {
     return thumbnail!;
   }
 
-  @override
-  Widget build(BuildContext context) {
-    _randomTermFuture = getRandomTerm();
-    _randomTermFuture.then((value) {
-      print(value);
-    });
+@override
+Widget build(BuildContext context) {
+ // _randomTermFuture = getRandomTerm();
 
-    _startTimer();
-    return Scaffold(
-      body: FutureBuilder<Map<String, dynamic>>(
+  return Scaffold(
+    body: SingleChildScrollView(
+      child: FutureBuilder<Map<String, dynamic>>(
         future: _randomTermFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -171,62 +223,67 @@ class TodayState extends State<TodayPage> {
                 children: [
                   Stack(
                     children: [
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.8,
-                        height: MediaQuery.of(context).size.height * 0.3,
-                        margin: EdgeInsets.all(16),
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Colors.indigo.shade100,
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(height: 16),
-                            Text(
-                              '$mot',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              ),
-                            ),
-                            SizedBox(height: 8),
-                            Text(
-                              'Definition',
-                              style: TextStyle(
-                                  fontSize: 14,
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            isImageExpanded = !isImageExpanded;
+                          });
+                        },
+                        child: Container(
+                          margin: EdgeInsets.all(16),
+                          padding: EdgeInsets.all(16),
+                          alignment: Alignment.center,
+                          width: MediaQuery.of(context).size.width * 0.9,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Colors.indigo.shade100,
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(height: 30),
+                              Text(
+                                '$mot',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
                                   color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              '$definition',
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.black,
+                                ),
                               ),
-                              textAlign: TextAlign.justify,
-                            ),
-                            SizedBox(height: 8),
-                            Text(
-                              'Exemple',
-                              style: TextStyle(
-                                  fontSize: 14,
+                              SizedBox(height: 8),
+                              Text(
+                                'Definition',
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                '$definition',
+                                style: TextStyle(
+                                  fontSize: 12,
                                   color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              '$exemple',
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.black,
+                                ),
+                                textAlign: TextAlign.justify,
                               ),
-                              textAlign: TextAlign.justify,
-                            ),
-                          ],
+                              SizedBox(height: 8),
+                              Text(
+                                'Example',
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                '$exemple',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.black,
+                                ),
+                                textAlign: TextAlign.justify,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       Positioned(
@@ -250,11 +307,13 @@ class TodayState extends State<TodayPage> {
                       ),
                     ],
                   ),
+                  SizedBox(height: 16),
                   Stack(
                     children: [
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.8,
+                        width: MediaQuery.of(context).size.width * 0.9,
                         height: MediaQuery.of(context).size.height * 0.4,
+                        margin: EdgeInsets.all(16),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           boxShadow: [
@@ -277,10 +336,10 @@ class TodayState extends State<TodayPage> {
                                     child: CircularProgressIndicator());
                               } else if (snapshot.hasError) {
                                 return Center(
-                                    child: Text('Failed to fetch APOD data'));
+                                    child: Text(
+                                        'Verify your internet connection'));
                               } else {
                                 final apod = snapshot.data!;
-                                print(apod.url);
 
                                 return Padding(
                                   padding: const EdgeInsets.all(16.0),
@@ -289,45 +348,47 @@ class TodayState extends State<TodayPage> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       if (apod.mediaType == 'image')
-                                         GestureDetector(
+                                        GestureDetector(
                                           onTap: () {
-                                            setState(() {
-                                              isImageExpanded = !isImageExpanded;
-                                            });
-
-                                            if (isImageExpanded) {
                                               Navigator.push(
                                                 context,
                                                 MaterialPageRoute(
-                                                  builder: (_) => ImageFullscreenPage(apod.url,apod.explanation),
+                                                  builder: (_) =>
+                                                      ImageFullscreenPage(
+                                                          apod.url,
+                                                          apod.explanation),
                                                 ),
                                               );
-                                            } else {
-                                              Navigator.pop(context);
-                                            }
                                           },
                                           child: Hero(
                                             tag: apod.url,
                                             child: ClipRRect(
-                                              borderRadius: BorderRadius.circular(8.0),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
                                               child: Stack(
                                                 children: [
                                                   Image.network(
                                                     apod.url,
                                                     fit: BoxFit.cover,
+                                                    width: MediaQuery.of(context).size.width * 0.85,
+                                                    height: MediaQuery.of(context).size.height * 0.35,
                                                   ),
-                                                  if (isImageExpanded)
                                                     Container(
-                                                      color: Colors.black.withOpacity(0.7),
+                                                      color: Colors.black
+                                                          .withOpacity(0.7),
                                                       child: Column(
-                                                        mainAxisAlignment: MainAxisAlignment.center,
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
                                                         children: [
                                                           Text(
                                                             apod.title,
                                                             style: TextStyle(
                                                               fontSize: 20,
                                                               color: Colors.white,
-                                                              fontWeight: FontWeight.bold,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
                                                             ),
                                                           )
                                                         ],
@@ -348,17 +409,16 @@ class TodayState extends State<TodayPage> {
                                               launchVideoUrl(url);
                                             },
                                             child: FutureBuilder<Uint8List>(
-                                              future: getThumbnail(apod.url),
+                                              future:
+                                                  getThumbnail(apod.url),
                                               builder: (context, snapshot) {
-                                                if (snapshot
-                                                        .connectionState ==
+                                                if (snapshot.connectionState ==
                                                     ConnectionState.waiting) {
                                                   return Center(
                                                     child:
                                                         CircularProgressIndicator(),
                                                   );
-                                                } else if (snapshot
-                                                    .hasError) {
+                                                } else if (snapshot.hasError) {
                                                   return Center(
                                                     child: Text(
                                                         'Failed to load video thumbnail\nClick to watch the video'),
@@ -410,8 +470,12 @@ class TodayState extends State<TodayPage> {
           }
         },
       ),
-    );
-  }
+    ),
+  );
+}
+
+
+
 
   void launchVideoUrl(Uri url) async {
     if (await canLaunchUrl(url)) {
@@ -421,7 +485,6 @@ class TodayState extends State<TodayPage> {
     }
   }
 }
-
 
 class ImageFullscreenPage extends StatelessWidget {
   final String imageUrl;
@@ -433,7 +496,8 @@ class ImageFullscreenPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Phototeque'),
+        title: Text('Media of the day',style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.indigo,
       ),
       body: GestureDetector(
         onTap: () {
@@ -442,6 +506,7 @@ class ImageFullscreenPage extends StatelessWidget {
         child: Container(
           color: Colors.black,
           child: PageView.builder(
+            physics: NeverScrollableScrollPhysics(), // Désactiver le défilement horizontal
             itemBuilder: (BuildContext context, int index) {
               return Container(
                 margin: EdgeInsets.symmetric(horizontal: 16.0, vertical: 32.0),

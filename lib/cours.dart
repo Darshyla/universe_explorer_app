@@ -1,8 +1,68 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:astronomy_app/main.dart';
+import 'package:provider/provider.dart';
 
+class Topic {
+  String title;
+  List<SubTopic> subTopics;
 
+  Topic({required this.title, required this.subTopics});
+
+  factory Topic.fromJson(Map<String, dynamic> json) {
+    List<dynamic> subTopicList = json['subTopics'];
+    List<SubTopic> subTopics = subTopicList.map((subTopicJson) => SubTopic.fromJson(subTopicJson)).toList();
+
+    return Topic(
+      title: json['title'],
+      subTopics: subTopics,
+    );
+  }
+}
+
+class SubTopic {
+  String title;
+  String image;
+  String intro;
+  List<Point> points;
+
+  SubTopic({
+    required this.title,
+    required this.image,
+    required this.points,
+    required this.intro
+  });
+
+  factory SubTopic.fromJson(Map<String, dynamic> json) {
+    List<dynamic> pointList = json['points'];
+    List<Point> points =
+        pointList.map((pointJson) => Point.fromJson(pointJson)).toList();
+
+    return SubTopic(
+      title: json['title'],
+      image: json['image'],
+      intro: json['intro'],
+      points: points,
+    );
+  }
+}
+
+class Point {
+  String title;
+  String content;
+  String image;
+
+  Point({required this.title, required this.content, required this.image});
+
+  factory Point.fromJson(Map<String, dynamic> json) {
+    return Point(
+      title: json['title'],
+      content: json['content'],
+      image: json['image']
+    );
+  }
+}
 
 class AstronomyTopics extends StatefulWidget {
   @override
@@ -37,70 +97,45 @@ class _AstronomyTopicsState extends State<AstronomyTopics> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  AppBar(
-        centerTitle: true,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.book,
-              color:  Colors.indigo[900],
-              size: 30.0,
-            ),
-            SizedBox(width: 8.0),
-            Text(
-              'Cours',
-              style: TextStyle(
-                color:  Colors.indigo[900],
-                fontSize: 24.0,
-                fontFamily: 'vivaldi', // Remplace 'JolieFont' par le nom de la police que tu souhaites utiliser
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-        backgroundColor: Colors.white,
-        elevation: 4.0,
-        brightness: Brightness.dark,
-        toolbarHeight: 80.0,
-        iconTheme: IconThemeData(color: Colors.white),
-        textTheme: TextTheme(
-          headline6: TextStyle(
-            color: Colors.white,
-            fontSize: 24.0,
-            fontFamily: 'Courier New', // Remplace 'JolieFont' par le nom de la police que tu souhaites utiliser
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.settings),
-            onPressed: () {
-              // Action du bouton des paramètres
-            },
-          ),
-        ],
-      ),
+      appBar: AppbarWidget(icon:Icons.book, text:'Courses'),
       body: ListView.builder(
         itemCount: topics.length,
         itemBuilder: (context, index) {
+          print(topics.length);
           return Card(
             elevation: 4.0,
             margin: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),
+            color: Colors.indigo, // Propriété 1: Couleur de fond
+            shadowColor: Colors.black, // Propriété 2: Couleur de l'ombre
+            borderOnForeground: true, // Propriété 3: Afficher la bordure au-dessus du contenu
+            semanticContainer: false, // Propriété 4: Définit si le widget est un conteneur sémantique
+            clipBehavior: Clip.antiAlias, // Propriété 5: Comportement de clipping
             child: ExpansionTile(
               title: Text(
                 topics[index].title,
                 style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.bold,
+                  color: Colors.white, // Propriété 6: Couleur du texte
                 ),
               ),
+              collapsedTextColor: Colors.red, // Propriété 7: Couleur du texte lorsqu'il est réduit
+              backgroundColor: Colors.white60, // Propriété 8: Couleur de fond lorsqu'il est réduit
+              initiallyExpanded: false, // Propriété 9: Définit si le widget est initialement étendu
+              maintainState: true, // Propriété 10: Maintenir l'état de l'expansion
+              tilePadding: EdgeInsets.all(16.0), // Propriété 11: Padding du titre
+              childrenPadding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 16.0), // Propriété 12: Padding des enfants
+              expandedAlignment: Alignment.centerLeft, // Propriété 13: Alignement du contenu étendu
+              expandedCrossAxisAlignment: CrossAxisAlignment.start, // Propriété 14: Alignement des enfants étendus
+              trailing: Icon(Icons.expand_more), // Propriété 15: Widget à afficher après le titre lorsqu'il est réduit
+              onExpansionChanged: (value) {}, // Propriété 16: Callback lorsque l'état d'expansion change
               children: _buildSubTopics(topics[index].subTopics),
             ),
           );
+
         },
       ),
     );
@@ -120,7 +155,7 @@ class _AstronomyTopicsState extends State<AstronomyTopics> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => AstronomyLessonPage(subTopic),
+              builder: (context) => AstronomyLessonPage(subTopic: subTopic),
             ),
           );
         },
@@ -129,45 +164,65 @@ class _AstronomyTopicsState extends State<AstronomyTopics> {
   }
 }
 
-
 class AstronomyLessonPage extends StatelessWidget {
   final SubTopic subTopic;
 
-  AstronomyLessonPage(this.subTopic);
+  AstronomyLessonPage({required this.subTopic});
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context); // Obtenez l'instance du ThemeProvider
+    Color iconColor = themeProvider.isDarkMode ? Colors.indigo.shade300 : Colors.indigo;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(subTopic.title),
+        title: Text(
+          subTopic.title,
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.indigo,
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset(
-              subTopic.image,
-              width: double.infinity,
-              height: 200,
-              fit: BoxFit.cover,
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Image.asset(
+                  subTopic.image,
+                  width: double.infinity,
+                  height: 200,
+                  fit: BoxFit.cover,
+                  color: Colors.blue,
+                  colorBlendMode: BlendMode.multiply,
+                ),
+                Positioned(
+                  child: Text(
+                    subTopic.title,
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: 16),
                   Text(
-                    subTopic.title,
+                    subTopic.intro,
+                    textAlign: TextAlign.justify,
                     style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    subTopic.title,
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey,
+                      fontSize: 20,
                     ),
                   ),
                   SizedBox(height: 16),
@@ -187,18 +242,35 @@ class AstronomyLessonPage extends StatelessWidget {
   List<Widget> _buildPoints(List<Point> points) {
     return points.map((point) {
       return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: 16),
           Text(
             point.title,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 24,
               fontWeight: FontWeight.bold,
+              color: Colors.indigo.shade300,
             ),
           ),
           SizedBox(height: 8),
+          if (point.image != null && point.image.isNotEmpty)
+           Image.asset(
+            point.image,
+            // width: double.infinity,
+            // height: 200,
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+            repeat: ImageRepeat.repeat,
+            filterQuality: FilterQuality.high,
+            semanticLabel: 'Image',
+            excludeFromSemantics: true,
+          )
+          ,
+          SizedBox(height: 8),
           Text(
             point.content,
+            textAlign: TextAlign.justify,
           ),
           SizedBox(height: 16),
         ],
@@ -206,62 +278,3 @@ class AstronomyLessonPage extends StatelessWidget {
     }).toList();
   }
 }
-
-class Topic {
-  String title;
-  List<SubTopic> subTopics;
-
-  Topic({required this.title, required this.subTopics});
-
-  factory Topic.fromJson(Map<String, dynamic> json) {
-    List<dynamic> subTopicList = json['subTopics'];
-    List<SubTopic> subTopics = subTopicList
-        .map((subTopicJson) => SubTopic.fromJson(subTopicJson))
-        .toList();
-
-    return Topic(
-      title: json['title'],
-      subTopics: subTopics,
-    );
-  }
-}
-
-class SubTopic {
-  String title;
-  String image;
-  List<Point> points;
-
-  SubTopic({
-    required this.title,
-    required this.image,
-    required this.points,
-  });
-
-  factory SubTopic.fromJson(Map<String, dynamic> json) {
-    List<dynamic> pointList = json['points'];
-    List<Point> points =
-        pointList.map((pointJson) => Point.fromJson(pointJson)).toList();
-
-    return SubTopic(
-      title: json['title'],
-      image: json['image'],
-      points: points,
-    );
-  }
-}
-
-class Point {
-  String title;
-  String content;
-
-  Point({required this.title, required this.content});
-
-  factory Point.fromJson(Map<String, dynamic> json) {
-    return Point(
-      title: json['title'],
-      content: json['content'],
-    );
-  }
-}
-
-

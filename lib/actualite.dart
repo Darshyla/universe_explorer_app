@@ -2,6 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:astronomy_app/main.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+
+
+class Article {
+
+  final int id;
+  final String title;
+  final String url;
+  final String imageUrl;
+  final String newsSite;
+  final String summary;
+  final String publishedAt;
+  final String updatedAt;
+
+  Article({
+    required this.id,
+    required this.title,
+    required this.url,
+    required this.imageUrl,
+    required this.newsSite,
+    required this.summary,
+    required this.publishedAt,
+    required this.updatedAt
+  });
+}
 
 class ApiService{
 
@@ -37,79 +63,13 @@ static Future<List<Article>> fetchArticles() async {
 
 }
 
-class Article {
-
-  final int id;
-  final String title;
-  final String url;
-  final String imageUrl;
-  final String newsSite;
-  final String summary;
-  final String publishedAt;
-  final String updatedAt;
-
-  Article({
-    required this.id,
-    required this.title,
-    required this.url,
-    required this.imageUrl,
-    required this.newsSite,
-    required this.summary,
-    required this.publishedAt,
-    required this.updatedAt
-  });
-}
-
 class ArticleListScreen extends StatelessWidget {
-  String defaultImageUrl = 'assets/images/astronaute/voyager-2-espace-interstellaire.jpg';
-
+  String defaultImageUrl = 'assets/images/planete_comete/mars.jpg';
+    
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-  centerTitle: true,
-  title: Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      Icon(
-        Icons.article,
-        color:  Colors.indigo[900],
-        size: 30.0,
-      ),
-      SizedBox(width: 8.0),
-      Text(
-        'Actualités',
-        style: TextStyle(
-          color:  Colors.indigo[900],
-          fontSize: 24.0,
-          fontFamily: 'vivaldi', // Remplace 'JolieFont' par le nom de la police que tu souhaites utiliser
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-    ],
-  ),
-  backgroundColor: Colors.white,
-  elevation: 4.0,
-  brightness: Brightness.dark,
-  toolbarHeight: 80.0,
-  iconTheme: IconThemeData(color: Colors.white),
-  textTheme: TextTheme(
-    headline6: TextStyle(
-      color: Colors.white,
-      fontSize: 24.0,
-      fontFamily: 'Courier New', // Remplace 'JolieFont' par le nom de la police que tu souhaites utiliser
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-  actions: [
-    IconButton(
-      icon: Icon(Icons.settings),
-      onPressed: () {
-        // Action du bouton des paramètres
-      },
-    ),
-  ],
-),
+      appBar: AppbarWidget(icon:Icons.article, text:'News'),
       body: FutureBuilder<List<Article>>(
         future: ApiService.fetchArticles(),
         builder: (context, snapshot) {
@@ -123,7 +83,7 @@ class ArticleListScreen extends StatelessWidget {
                 'Verify your internet connection',
                 style: TextStyle(
                   fontSize: 16.0,
-                  color: Colors.red,
+                  color: Colors.indigo,
                 ),
               ),
             );
@@ -136,7 +96,7 @@ class ArticleListScreen extends StatelessWidget {
                 return Card(
                   elevation: 4.0,
                   margin: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                  color: Colors.white,
+                  color: Theme.of(context).scaffoldBackgroundColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
@@ -155,7 +115,7 @@ class ArticleListScreen extends StatelessWidget {
                         SizedBox(height: 8.0),
                         ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(
+                          child:Image.network(
                             article.imageUrl,
                             width: double.infinity,
                             height: 200,
@@ -170,7 +130,7 @@ class ArticleListScreen extends StatelessWidget {
                           article.summary,
                           style: TextStyle(
                             fontSize: 14.0,
-                            color: Colors.black,
+                            color: Theme.of(context).textTheme.titleLarge?.color,
                           ),
                           textAlign: TextAlign.justify,
                           maxLines: 3,

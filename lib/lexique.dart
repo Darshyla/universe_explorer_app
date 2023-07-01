@@ -1,7 +1,9 @@
+import 'package:astronomy_app/main.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'dart:async';
+import 'package:provider/provider.dart';
 
 class Lexique extends StatefulWidget {
   const Lexique({Key? key}) : super(key: key);
@@ -22,82 +24,85 @@ class LexiqueState extends State<Lexique> {
   }
 
   Future<void> loadJsonContent() async {
-    try {
-      final String jsonString = await rootBundle.loadString('assets/lexique.json');
-      setState(() {
-        jsonContent = jsonString;
-      });
-    } catch (e) {
-      print('Error loading JSON content: $e');
-    }
+  try {
+    final String jsonString = await rootBundle.loadString('assets/lexique.json');
+    setState(() {
+      jsonContent = jsonString;
+    });
+  } catch (e, stackTrace) {
   }
+}
 
-  List<ExpansionTile> getWordsStartingWithLetter(String letter) {
-    final parsedJson = json.decode(jsonContent);
-    final List<dynamic> terms = parsedJson['terms'];
 
-    List<ExpansionTile> expansionTiles = [];
-    for (var term in terms) {
-      final String mot = term['mot'];
-      if (mot.startsWith(letter) && getFilteredWords(searchController.text).contains(mot)) {
-        final String definition = term['definition'];
-        final String exemple = term['exemple'];
+  
 
-        final bool isExpanded = letter == expandedLetter && searchController.text.isNotEmpty; // Vérifier si l'ExpansionTile doit être déployé
+ List<ExpansionTile> getWordsStartingWithLetter(String letter) {
+  final parsedJson = json.decode(jsonContent);
+  final List<dynamic> words = List.from(parsedJson);
 
-        expansionTiles.add(
-          ExpansionTile(
-            title: Text(
-              mot,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-                color: Colors.blue,
+  List<ExpansionTile> expansionTiles = [];
+  for (var word in words) {
+    final String mot = word['mot'];
+    if (mot.startsWith(letter) && getFilteredWords(searchController.text).contains(mot)) {
+      final String definition = word['definition'];
+      final String exemple = word['exemple'];
+
+      final bool isExpanded = letter == expandedLetter && searchController.text.isNotEmpty; // Check if the ExpansionTile should be expanded
+
+      expansionTiles.add(
+        ExpansionTile(
+          title: Text(
+            mot,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              color: Colors.indigo.shade300,
+            ),
+          ),
+          initiallyExpanded: isExpanded, // Use the isExpanded variable to determine if the ExpansionTile should be expanded
+          children: [
+            ListTile(
+              title: Text(
+                'Definition:',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  color: Theme.of(context).textTheme.titleLarge?.color,
+                ),
+              ),
+              subtitle: Text(
+                definition,
+                style: TextStyle(
+                  fontSize: 12,
+                ),
+                textAlign: TextAlign.justify,
               ),
             ),
-            initiallyExpanded: isExpanded, // Utiliser la variable isExpanded pour déterminer si l'ExpansionTile doit être déployé
-            children: [
-              ListTile(
-                title: Text(
-                  'Definition: ',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.black,
-                  ),
-                ),
-                subtitle: Text(
-                  definition,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey,
-                  ),
+            ListTile(
+              title: Text(
+                'Example:',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  color: Theme.of(context).textTheme.titleLarge?.color,
                 ),
               ),
-              ListTile(
-                title: Text(
-                  'Exemple: ',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.black,
-                  ),
+              subtitle: Text(
+                exemple,
+                style: TextStyle(
+                  fontSize: 12,
                 ),
-                subtitle: Text(
-                  exemple,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey,
-                  ),
-                ),
+                textAlign: TextAlign.justify,
               ),
-            ],
-          ),
-        );
-      }
+            ),
+          ],
+        ),
+      );
     }
-    return expansionTiles;
   }
+  return expansionTiles;
+}
+
 
   final List<String> alphabet = [
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
@@ -106,21 +111,24 @@ class LexiqueState extends State<Lexique> {
   ];
 
   List<String> getFilteredWords(String searchQuery) {
-    final parsedJson = json.decode(jsonContent);
-    final List<dynamic> terms = parsedJson['terms'];
+  final parsedJson = json.decode(jsonContent);
 
-    List<String> filteredWords = [];
-    for (var term in terms) {
-      final String mot = term['mot'];
-      if (mot.toLowerCase().contains(searchQuery.toLowerCase())) {
-        filteredWords.add(mot);
-      }
+  List<String> filteredWords = [];
+  for (var word in parsedJson) {
+    final String mot = word['mot'];
+    if (mot.toLowerCase().contains(searchQuery.toLowerCase())) {
+      filteredWords.add(mot);
     }
-    return filteredWords;
   }
+  return filteredWords;
+}
+
 
   @override
   Widget build(BuildContext context) {
+     final themeProvider = Provider.of<ThemeProvider>(context); // Obtenez l'instance du ThemeProvider
+     Color iconColor = themeProvider.isDarkMode ? Colors.indigo.shade300 : Colors.indigo;
+
     final filteredWords = getFilteredWords(searchController.text);
     if (filteredWords.isNotEmpty) {
       expandedLetter = filteredWords.first.substring(0, 1).toUpperCase();
@@ -129,50 +137,7 @@ class LexiqueState extends State<Lexique> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-  centerTitle: true,
-  title: Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      Icon(
-        Icons.bookmark,
-        color:  Colors.indigo[900],
-        size: 30.0,
-      ),
-      SizedBox(width: 8.0),
-      Text(
-        'Lexique',
-        style: TextStyle(
-          color:  Colors.indigo[900],
-          fontSize: 24.0,
-          fontFamily: 'vivaldi', // Remplace 'JolieFont' par le nom de la police que tu souhaites utiliser
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-    ],
-  ),
-  backgroundColor: Colors.white,
-  elevation: 4.0,
-  brightness: Brightness.dark,
-  toolbarHeight: 80.0,
-  iconTheme: IconThemeData(color: Colors.white),
-  textTheme: TextTheme(
-    headline6: TextStyle(
-      color: Colors.white,
-      fontSize: 24.0,
-      fontFamily: 'Courier New', // Remplace 'JolieFont' par le nom de la police que tu souhaites utiliser
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-  actions: [
-    IconButton(
-      icon: Icon(Icons.settings),
-      onPressed: () {
-        // Action du bouton des paramètres
-      },
-    ),
-  ],
-),
+      appBar: AppbarWidget(icon: Icons.bookmark, text: 'Glossary'),
       body: Column(
         children: [
           Padding(
@@ -180,21 +145,21 @@ class LexiqueState extends State<Lexique> {
             child: TextField(
               controller: searchController,
               onChanged: (value) {
-                setState(() {}); // Réexécute le build lors de la modification du champ de recherche
+                setState(() {}); 
               },
               style: TextStyle(
                 fontSize: 14,
-                color: Colors.black,
+                color: Theme.of(context).textTheme.titleLarge?.color,
               ),
               decoration: InputDecoration(
                 labelText: 'Recherche',
                 labelStyle: TextStyle(
                   fontSize: 16,
-                  color: Colors.blue,
+                  color: iconColor,
                 ),
                 prefixIcon: Icon(
                   Icons.search,
-                  color: Colors.blue,
+                  color: iconColor,
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -222,7 +187,7 @@ class LexiqueState extends State<Lexique> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
-                            color: Colors.black,
+                            color: Theme.of(context).textTheme.titleLarge?.color,
                           ),
                         ),
                         children: filteredTiles,

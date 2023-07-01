@@ -1,66 +1,82 @@
 [
   {
     "title": "Galaxies",
+    "image":"assets/images/Cours/galaxy_spirale.jpg",
     "url": "galaxy"
   },
   {
-    "title": "Nebuleuses",
+    "title": "Nebulae",
+    "image":"assets/images/nebuleuse_galaxie/nebuleuse_de_la_meduse.jpg",
     "url": "nebulae"
   },
   {
-    "title": "Lune",
+    "title": "Moon",
+    "image":"assets/images/Cours/lune.jpg",
     "url": "moon"
   },
   {
-    "title": "Terre",
+    "title": "Earth",
+    "image":"assets/images/Cours/terre.jpg",
     "url": "earth"
   },
   {
-    "title": "Planètes",
+    "title": "Planets",
+    "image":"assets/images/planete_comete/systeme_solaire.jpg",
     "url": "planet"
   },
   {
-    "title": "Comètes",
+    "title": "Comets",
+    "image":"assets/images/planete_comete/Comet_Halley.jpg",
     "url": "comet"
   },
   {
-    "title": "Asteroïdes",
+    "title": "Asteroids",
+    "image":"assets/images/Cours/asteroide.jpg",
     "url": "asteroid"
   },
   {
-    "title": "Etoiles",
+    "title": "Stars",
+    "image":"assets/images/etoile_constellation/soleil.jpeg",
     "url": "star"
   },
   {
     "title": "Hubble",
+    "image":"assets/images/hubble.jpg",
     "url": "hubble"
   },
   {
-    "title": "Astronautes",
+    "title": "Astronauts",
+    "image":"assets/images/astronaute/apollo11.jpg",
     "url": "astronaut"
   },
   {
-    "title": "Missions spatiales",
+    "title": "Space explorations",
+    "image":"assets/images/Cours/mars_rover.jpg",
     "url": "mission"
   },
   {
-    "title": "Instruments astronomiques",
+    "title": "Astronomic instruments",
+    "image":"assets/images/Cours/telesc_optique.jpg",
     "url": "instrument"
   },
   {
-    "title": "Système solaire",
+    "title": "Solar system",
+    "image":"assets/images/Cours/struct_syst_solaire.jpg",
     "url": "solarsystem"
   },
   {
-    "title": "Trous noirs",
+    "title": "Black holes",
+    "image":"assets/images/Cours/trou_noir.jpg",
     "url": "blackhole"
   },
   {
-    "title": "Supernovas",
+    "title": "Supernovae",
+    "image":"assets/images/Cours/supernova.jpg",
     "url": "supernovae"
   },
   {
-    "title": "Exoplanètes",
+    "title": "Exoplanets",
+    "image":"assets/images/Cours/rech_exopl.jpg",
     "url": "exoplanet"
   }
 
