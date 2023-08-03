@@ -325,7 +325,13 @@ Widget build(BuildContext context) {
   }
   _saveScore(correctAnswers);
 
-  return Scaffold(
+  return WillPopScope(
+       onWillPop: () async {
+    Navigator.of(context).pop(); 
+    Navigator.of(context).pop(); 
+    return false;
+      },
+      child: Scaffold(
     appBar: AppBar(
       title: Text(
         'Score',
@@ -334,13 +340,6 @@ Widget build(BuildContext context) {
           fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
-      ),
-      leading: IconButton(
-        icon: Icon(Icons.arrow_back),
-        onPressed: () {
-          Navigator.pop(context);
-          Navigator.pop(context);
-        },
       ),
       backgroundColor: Colors.indigo,
     ),
@@ -425,6 +424,7 @@ Widget build(BuildContext context) {
         ],
       ),
     ),
+  )
   );
 }
 
@@ -439,7 +439,14 @@ class ResultsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return WillPopScope(
+       onWillPop: () async {
+    Navigator.of(context).pop(); 
+    Navigator.of(context).pop(); 
+    Navigator.of(context).pop(); 
+    return false;
+      },
+      child: Scaffold(
       appBar: AppBar(
         title: Text('Results',
         style: TextStyle(
@@ -447,14 +454,6 @@ class ResultsPage extends StatelessWidget {
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),),
-        leading: IconButton(
-        icon: Icon(Icons.arrow_back),
-        onPressed: () {
-        Navigator.pop(context);
-        Navigator.pop(context);
-        Navigator.pop(context);
-        },
-      ),
       backgroundColor: Colors.indigo,
       ),
       body: ListView.builder(
@@ -468,7 +467,7 @@ class ResultsPage extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(16),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     question.question,
@@ -499,6 +498,7 @@ class ResultsPage extends StatelessWidget {
           );
         },
       ),
+    )
     );
   }
 }

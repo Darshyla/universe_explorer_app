@@ -3,7 +3,6 @@ import 'package:url_launcher/url_launcher.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:astronomy_app/main.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 
 class Article {

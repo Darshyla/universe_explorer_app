@@ -28,32 +28,20 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  http: ^0.13.3
-  intl: ^0.17.0
   url_launcher: ^6.0.3
   shared_preferences: ^2.0.7
-  flutter_icons: ^1.1.0
   fluid_bottom_nav_bar: ^1.4.0
-  flutter_secure_storage: ^5.0.0
-  flutter_localizations:
-    sdk: flutter
   flutter:
     sdk: flutter
-  flutter_downloader: ^1.6.1
-  path_provider: ^2.0.5
-  webview_flutter: ^2.2.0
-  video_player: ^2.2.5
   video_thumbnail: ^0.5.3
-  sqflite: ^2.0.0+4
   intro_views_flutter: ^3.2.0
   provider: ^5.0.0
   share: ^2.0.4
-  flutter_local_notifications: ^12.0.2
-  flutter_native_timezone: ^1.0.0
   image_gallery_saver: ^2.0.2
   cached_network_image: ^3.2.3
-  flutter_background_service: ^3.0.1 
   timezone: ^0.9.2
+  flutter_local_notifications: ^12.0.2
+  
 
     
 
@@ -83,152 +71,13 @@ flutter:
     - assets/lexique.json
     - assets/topics.json
     - assets/galerie.json
-    - assets/galerie_page.json
     - assets/quizz.json
-    - assets/images/planete_comete/jupiter.jpeg
-    - assets/images/planete_comete/lune.png
-    - assets/images/planete_comete/mars.jpg
-    - assets/images/planete_comete/mercure.jpg
-    - assets/images/planete_comete/planete-venus-1-.jpeg
-    - assets/images/planete_comete/pluton.jpeg
-    - assets/images/planete_comete/saturne.jpeg
-    - assets/images/planete_comete/systeme_solaire.jpg
-    - assets/images/planete_comete/uranus.jpg
-    - assets/images/fusee_bouge.gif
-    - assets/images/ciel_etoile_background.jpeg
-    - assets/images/Intro_screen/actualites.png
-    - assets/images/Intro_screen/bienvenue.png
-    - assets/images/Intro_screen/cours.webp
-    - assets/images/Intro_screen/forum.webp
-    - assets/images/Intro_screen/galerie.webp
-    - assets/images/Intro_screen/lexique.webp
-    - assets/images/Intro_screen/quizz.webp
-    - assets/images/quizz/saturne.jpeg
-    - assets/images/quizz/quasar.jpeg
-    - assets/images/quizz/galaxieSpirale.jpg
-    - assets/images/quizz/Comet_Halley.jpg
-    - assets/images/quizz/betelgeuse.jpeg
-    - assets/images/quizz/andromedre_galaxy.jpg
-    - assets/images/quizz/andromede_constellation.png
-    - assets/images/quizz/amas_globulaire.jpg
-    - assets/images/quizz/realistic-multicolored-confetti-vector-for-the-festival-confetti-and-tinsel-falling-background-colorful-confetti-isolated-on-transparent-background-carnival-elements-birthday-party-celebration-free-png.webp
-    - assets/images/Cours/astro_science.jpg
-    - assets/images/Cours/asteroide.jpg
-    - assets/images/Cours/aurore_polaire.jpg
-    - assets/images/Cours/bigbang.jpg
-    - assets/images/Cours/caracteristiques.jpg
-    - assets/images/Cours/constellation.jpg
-    - assets/images/Cours/destin_univers.jpg
-    - assets/images/Cours/diagramme_ranstay.png
-    - assets/images/Cours/groupe_local.jpg
-    - assets/images/Cours/histoire.jpg
-    - assets/images/Cours/IO6J.gif
-    - assets/images/Cours/matier_noire.jpg
-    - assets/images/Cours/meteore.jpg
-    - assets/images/Cours/phenonomene_celeste.jpg
-    - assets/images/Cours/structure_etoile.jpg
-    - assets/images/Cours/telescope.jpg
-    - assets/images/Cours/trou_noir.jpg
-    - assets/images/Cours/type_galaxie.jpg
-    - assets/images/Cours/struct_syst_solaire.jpg
-    - assets/images/Cours/terre.jpg
-    - assets/images/Cours/neptune.jpg
-    - assets/images/Cours/mouvement_planete.gif
-    - assets/images/Cours/comete.jpg
-    - assets/images/Cours/lune.jpg
-    - assets/images/Cours/asteroide.jpg
-    - assets/images/Cours/structure_etoile1.jpg
-    - assets/images/Cours/structure_etoile.jpg
-    - assets/images/Cours/formation_etoile.gif
-    - assets/images/Cours/cycle_vie_etoile.jpg
-    - assets/images/Cours/telesc_radio.jpg
-    - assets/images/Cours/telesc_optique.jpg
-    - assets/images/Cours/teles_magellan.jpg
-    - assets/images/Cours/ast_com.jpg
-    - assets/images/Cours/evoluti_stellaire.jpg
-    - assets/images/Cours/galaxie_irreguliere.jpg
-    - assets/images/Cours/galaxy_eliptique.jpg
-    - assets/images/Cours/galaxy_lenticulaire.jpg
-    - assets/images/Cours/galaxy_naine.jpg
-    - assets/images/Cours/galaxy_spirale.jpg
-    - assets/images/Cours/superamas.jpg
-    - assets/images/Cours/amas_galaxy.jpg
-    - assets/images/Cours/groupe_local.png
-    - assets/images/Cours/structure_cosmique.jpg
-    - assets/images/Cours/sursaut_gamma.jpg
-    - assets/images/Cours/sursaut_gamma.jpg
-    - assets/images/Cours/phenome_extreme.jpg
-    - assets/images/Cours/eclipse.jpg
-    - assets/images/Cours/eclipse_solaire.jpg
-    - assets/images/Cours/eclipse_lunaire.jpg
-    - assets/images/Cours/bolide.jpg
-    - assets/images/phenomene_celeste/pluie_detoile.jpg
-    - assets/images/phenomene_celeste/etoile_filante.jpg
-    - assets/images/Cours/meteore_.jpg
-    - assets/images/phenomene_celeste/Noctilucent_clouds_over_Uppsala,_Sweden.jpg
-    - assets/images/phenomene_celeste/arcenciel.jpg
-    - assets/images/phenomene_celeste/aurore_boreale.jpeg
-    - assets/images/Cours/phenom_asmotphe.jpg
-    - assets/images/Cours/radiation.jpg
-    - assets/images/Cours/expansion_univers.jpg
-    - assets/images/Cours/evolution_universe.jpg
-    - assets/images/Cours/energie-sombre.jpg
-    - assets/images/Cours/mati_noire_et_energie.webp
-    - assets/images/Cours/future_decouv.jpg
-    - assets/images/Cours/evolution_univers.jpg
-    - assets/images/Cours/expansion_univers.jpg
-    - assets/images/Cours/exploration_roboti.jpg
-    - assets/images/nebuleuse_galaxie/nebuleuse_du_papillon.jpg
-    - assets/images/nebuleuse_galaxie/nebuleuse_de_laigle.jpeg
-    - assets/images/Cours/course_espace.jpg
-    - assets/images/Cours/galilei.jpg
-    - assets/images/Cours/laika.jpg
-    - assets/images/Cours/mars_rover.jpg
-    - assets/images/Cours/voyager.jpg
-    - assets/images/Cours/apollo11.jpg
-    - assets/images/Cours/rech_exopl.jpg
-    - assets/images/Cours/lune_jupiter.jpg
-    - assets/images/Cours/homme_on_mars.jpg
-    - assets/images/Cours/explor_spatiale.jpg
-    - assets/images/Cours/reche_mat_noire.jpg
-    - assets/images/Cours/ondes_grav.jpg
-    - assets/images/Cours/reche_trou_noir.jpg
-    - assets/images/Cours/decouve.jpg
-    - assets/images/Cours/teles_euclid.jpg
-    - assets/images/Cours/teles_magellan.jpg
-    - assets/images/Cours/jamesWeb.jpg
-    - assets/images/Cours/new_teles.jpg
-    - assets/images/Cours/carte_3d.jpg
-    - assets/images/Cours/cosmol_quantiq.jpg
-    - assets/images/Cours/astrobiol.jpg
-    - assets/images/Cours/domaine_astro.jpg
-    - assets/images/Cours/observ_spatiaux.jpg
-    - assets/images/Cours/class_etoile.jpg
-    - assets/images/Cours/type_galaxy.jpg
-    - assets/images/Cours/histoire_exploration.jpg
-    - assets/images/Cours/mission_spatiale.jpg
-    - assets/images/onboarding/actuLogo.png
-    - assets/images/onboarding/actuMain.png
-    - assets/images/onboarding/Cours Logo.png
-    - assets/images/onboarding/Cours_main.png
-    - assets/images/onboarding/phototequeMain.png
-    - assets/images/onboarding/galeriLogo.png
-    - assets/images/onboarding/lexiqueLogo.png
-    - assets/images/onboarding/lexiqueMAin.png
-    - assets/images/onboarding/quizLogo.webp
-    - assets/images/onboarding/quizMain.png
-    - assets/images/onboarding/welcomelogo.png
-    - assets/images/onboarding/bienvenue.png
-    - assets/images/ciel_etoile.jpg
-    - assets/images/gallery_home/nebuleuse_et_galaxie.jpg
-    - assets/images/planete_comete/Comet_Halley.jpg
-    - assets/images/etoile_constellation/proxima_centauri.jpg
-    - assets/images/hubble.jpg
-    - assets/images/astronaute/alyssa_carson.jpeg
-    - assets/images/Cours/supernova.jpg
-    - assets/images/etoile_constellation/soleil.jpeg
-    - assets/images/astronaute/apollo11.jpg
-    - assets/images/nebuleuse_galaxie/nebuleuse_de_la_meduse.jpg
+    - assets/images/Cours/
+    - assets/images/Intro_screen/
+    - assets/images/onboarding/
+    - assets/images/phenomene_celeste/
+    - assets/images/planete_comete/
+    - assets/images/quizz/
     
     
 

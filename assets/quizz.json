@@ -420,13 +420,13 @@
                       },
                       {
                       "question": "What is this famous nebula?",
-                      "image": "assets/images/nebuleuse_galaxie/nebuleuse_de_laigle.jpeg",
+                      "image": "assets/images/quizz/nebuleuse_de_laigle.jpeg",
                       "options": ["Orion Nebula", "Crab Nebula", "Eagle Nebula", "Helix Nebula"],
                       "answer": 2
                       },
                       {
                       "question": "What is this celestial object?",
-                      "image": "assets/images/nebuleuse_galaxie/nebuleuse_du_papillon.jpg",
+                      "image": "assets/images/quizz/nebuleuse_du_papillon.jpg",
                       "options": ["Elliptical Galaxy", "Galaxy Cluster", "Butterfly Nebula", "Supermassive Black Holes"],
                       "answer": 2
                       },

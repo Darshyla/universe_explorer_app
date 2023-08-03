@@ -109,7 +109,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    title: Text('À propos de l\'application'),
+                    title: Text('About the app'),
                     content: TextInfo(),
                     actions: <Widget>[
                       TextButton(

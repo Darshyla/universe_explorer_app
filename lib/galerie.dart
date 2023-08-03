@@ -2,7 +2,6 @@ import 'package:astronomy_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' show get;
 import 'dart:io';
@@ -99,6 +98,7 @@ class ApiService{
     final item = items[1];
     final links = item['links'];
     final data = item['data'][0];
+    print(2);
 
     // Recherche du lien de l'image en format JPG
     String imageUrl = '';
@@ -309,7 +309,7 @@ class _FullScreenImageState extends State<FullScreenImage> with SingleTickerProv
     _pageController = PageController(initialPage: _currentIndex);
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 500),
+      duration: Duration(milliseconds: 1000),
     );
     _animation = Tween<double>(begin: 0, end: 1).animate(_animationController);
   }

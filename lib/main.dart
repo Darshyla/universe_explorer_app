@@ -14,14 +14,16 @@ import 'home.dart';
 import 'auj.dart';
 import 'onboarding.dart';
 
-
+ bool _notificationsEnabled = true;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialisez les notifications (schedule daily notification)
-  NotificationPlan notificationPlan = NotificationPlan();
-  await notificationPlan._initializeNotifications();
+  if(_notificationsEnabled){
+      NotificationPlan notificationPlan = NotificationPlan();
+     await notificationPlan._initializeNotifications();
+  }
+  
 
   runApp(
     FutureBuilder(
@@ -108,8 +110,8 @@ class NotificationPlan {
   // Schedule the daily notification
   await flutterLocalNotificationsPlugin.showDailyAtTime(
     0,
-    'Media of the day',
-    'Your daily media is ready, go learn about it',
+    'Media/Word of the day',
+    'Your daily media and word are ready, go learn',
     time,
     platformChannelSpecifics,
   );
@@ -172,7 +174,8 @@ class MyApp extends StatelessWidget {
             '/cours': (context) => AstronomyTopics(),
             '/quizz': (context) => CategoryList(),
             '/phototheque': (context) => const Galerie(),
-            '/lexique': (context) => const Lexique(),
+            '/lexique': (context) =>  LexiquePage(),
+            '/CategoryList': (context) =>CategoryList()
           },
           theme: themeProvider.isDarkMode
               ? ThemeData(
@@ -244,10 +247,11 @@ Widget build(BuildContext context) {
     body: Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/ciel_etoile.jpg'),
+          image: AssetImage('assets/images/onboarding/cielEtoile.jpg'),
           fit: BoxFit.cover,
           opacity: 0.9
         ),
+        color: Colors.black87
       ),
       child: Center(
         child: _showGreetings
@@ -267,18 +271,18 @@ Widget build(BuildContext context) {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
-                      'assets/images/fusee_bouge.gif',
+                      'assets/images/onboarding/fusee_bouge.gif',
                       width: 200,
                       height: 200,
                       fit: BoxFit.contain,
                     ),
-                    SizedBox(height: 16),
+                    SizedBox(height: 40),
                     Text(
                       'The universe, an exploration of infinity',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white
+                        color: Colors.indigo.shade300
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -426,16 +430,8 @@ class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
       ),
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       elevation: 4.0,
-      brightness: Brightness.dark,
       toolbarHeight: 80.0,
       iconTheme: IconThemeData(color: iconColor),
-      textTheme: TextTheme(
-        headline6: TextStyle(
-          color: Colors.white,
-          fontSize: 24.0,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
     );
   }
 }

@@ -6,7 +6,7 @@
   },
   {
     "title": "Nebulae",
-    "image":"assets/images/nebuleuse_galaxie/nebuleuse_de_la_meduse.jpg",
+    "image":"assets/images/Cours/nebuleuse_de_la_meduse.jpg",
     "url": "nebulae"
   },
   {
@@ -36,17 +36,17 @@
   },
   {
     "title": "Stars",
-    "image":"assets/images/etoile_constellation/soleil.jpeg",
+    "image":"assets/images/Cours/soleil.jpeg",
     "url": "star"
   },
   {
     "title": "Hubble",
-    "image":"assets/images/hubble.jpg",
+    "image":"assets/images/Cours/hubble.jpg",
     "url": "hubble"
   },
   {
     "title": "Astronauts",
-    "image":"assets/images/astronaute/apollo11.jpg",
+    "image":"assets/images/Cours/apollo11.jpg",
     "url": "astronaut"
   },
   {
